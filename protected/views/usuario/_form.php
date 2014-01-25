@@ -6,59 +6,71 @@
 
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'usuario-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
-)); ?>
+    <?php
+    $form = $this->beginWidget('CActiveForm', array(
+        'id' => 'usuario-form',
+        // Please note: When you enable ajax validation, make sure the corresponding
+        // controller action is handling ajax validation correctly.
+        // There is a call to performAjaxValidation() commented in generated controller code.
+        // See class documentation of CActiveForm for details on this.
+        'enableAjaxValidation' => false,
+    ));
+    ?>
 
-	<p class="note">Los campos con <span class="required">*</span> son requeridos.</p>
+    <p class="note">Los campos con <span class="required">*</span> son requeridos.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+    <?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'nombre_usuario'); ?>
-		<?php echo $form->textField($model,'nombre_usuario',array('size'=>30,'maxlength'=>30)); ?>
-		<?php echo $form->error($model,'nombre_usuario'); ?>
-	</div>
+    <div class="row">
+        <?php echo $form->labelEx($model, 'nombre_usuario'); ?>
+        <?php echo $form->textField($model, 'nombre_usuario', array('size' => 30, 'maxlength' => 30)); ?>
+        <?php echo $form->error($model, 'nombre_usuario'); ?>
+    </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'apellido_usuario'); ?>
-		<?php echo $form->textField($model,'apellido_usuario',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'apellido_usuario'); ?>
-	</div>
+    <div class="row">
+        <?php echo $form->labelEx($model, 'apellido_usuario'); ?>
+        <?php echo $form->textField($model, 'apellido_usuario', array('size' => 50, 'maxlength' => 50)); ?>
+        <?php echo $form->error($model, 'apellido_usuario'); ?>
+    </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>15,'maxlength'=>15)); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
+    <div class="row">
+        <?php echo $form->labelEx($model, 'username'); ?>
+        <?php echo $form->textField($model, 'username', array('size' => 15, 'maxlength' => 15)); ?>
+        <?php echo $form->error($model, 'username'); ?>
+    </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'password_hash'); ?>
-		<?php echo $form->textField($model,'password_hash',array('size'=>30,'maxlength'=>30)); ?>
-		<?php echo $form->error($model,'password_hash'); ?>
-	</div>
+    <div class="row">
+        <?php echo $form->labelEx($model, 'password_hash'); ?>
+        <?php echo $form->passwordField($model, 'password_hash', array('size' => 30, 'maxlength' => 30)); ?>
+        <?php echo $form->error($model, 'password_hash'); ?>
+    </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'tipo_usuario'); ?>
-		<?php echo $form->textField($model,'tipo_usuario',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'tipo_usuario'); ?>
-	</div>
+    <div class="row">
+        <?php echo $form->labelEx($model, 'confirmarContrasena'); ?>
+        <?php echo $form->passwordField($model, 'confirmarContrasena', array('size' => 35, 'maxlength' => 35)); ?>
+        <?php echo $form->error($model, 'confirmarContrasena'); ?>
+    </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'activo'); ?>
-		<?php echo $form->textField($model,'activo'); ?>
-		<?php echo $form->error($model,'activo'); ?>
-	</div>
+    <div class="row">
+        <?php echo $form->labelEx($model, 'tipo_usuario'); ?>
+        <?php 
+        echo $form->dropDownList($model, 'tipo_usuario', array('operador' => 'Operador','taxista' => 'Taxista',
+            'cliente' => 'Cliente'), array('empty' => 'Seleccione la Categoria'));
+        ?>
+        <?php echo $form->error($model, 'tipo_usuario'); ?>
+    </div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Editar'); ?>
-	</div>
+    <div class="row">
+        <?php echo $form->labelEx($model, 'activo'); ?>
+        <?php echo $form->dropDownList($model, 'activo', array('0' => 'No',
+            '1' => 'Si',), array('empty' => 'Seleccione la Categoria')); ?>
+        <?php echo $form->error($model, 'activo'); ?>
+    </div>
 
-<?php $this->endWidget(); ?>
+    <div class="row buttons">
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Editar'); ?>
+    </div>
+
+    <?php $this->endWidget(); ?>
 
 </div><!-- form -->

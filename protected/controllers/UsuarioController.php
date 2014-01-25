@@ -70,8 +70,13 @@ class UsuarioController extends Controller
 		if(isset($_POST['Usuario']))
 		{
 			$model->attributes=$_POST['Usuario'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_usuario));
+			if($model->save()){
+                            if($model->tipo_usuario=='taxista'){
+                                $this->redirect(array('taxista/create&id='. $model->id_usuario));
+                            }else{
+                                $this->redirect(array('view','id'=>$model->id_usuario));
+                            }
+                        }
 		}
 
 		$this->render('create',array(

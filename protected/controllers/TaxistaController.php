@@ -63,10 +63,10 @@ class TaxistaController extends Controller
 	public function actionCreate()
 	{
 		$model=new Taxista;
-
+                $idTaxista=$_GET['id'];
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+                $model->id_taxista=$idTaxista;
 		if(isset($_POST['Taxista']))
 		{
 			$model->attributes=$_POST['Taxista'];

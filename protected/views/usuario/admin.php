@@ -4,12 +4,12 @@
 
 $this->breadcrumbs=array(
 	'Usuarios'=>array('index'),
-	'Manage',
+	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'List Usuario', 'url'=>array('index')),
-	array('label'=>'Create Usuario', 'url'=>array('create')),
+	array('label'=>'Listar Usuarios', 'url'=>array('index')),
+	array('label'=>'Registrar Usuario', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
