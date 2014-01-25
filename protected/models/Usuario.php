@@ -67,11 +67,11 @@ class Usuario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_usuario' => 'Id Usuario',
-			'nombre_usuario' => 'Nombre Usuario',
-			'apellido_usuario' => 'Apellido Usuario',
-			'username' => 'Username',
-			'password_hash' => 'Password Hash',
+			'id_usuario' => 'ID Usuario',
+			'nombre_usuario' => 'Nombres',
+			'apellido_usuario' => 'Apellidos',
+			'username' => 'Nombre de Usuario',
+			'password_hash' => 'Contraseña',
 			'tipo_usuario' => 'Tipo Usuario',
 			'activo' => 'Activo',
 		);
