@@ -6,6 +6,7 @@ $this->breadcrumbs=array(
 	'Usuarios'=>array('index'),
 	'Administrar',
 );
+$this->pageTitle=Yii::app()->name.' - Administrar Usuarios';
 
 $this->menu=array(
 	array('label'=>'Listar Usuarios', 'url'=>array('index')),

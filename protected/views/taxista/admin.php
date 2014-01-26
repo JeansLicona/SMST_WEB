@@ -6,7 +6,7 @@ $this->breadcrumbs=array(
 	'Taxistas'=>array('index'),
 	'Administrar',
 );
-
+$this->pageTitle=Yii::app()->name.' - Administrar Taxista';
 $this->menu=array(
 	array('label'=>'Listar Taxistas', 'url'=>array('index')),
 	array('label'=>'Registrar Taxista', 'url'=>array('usuario/create')),

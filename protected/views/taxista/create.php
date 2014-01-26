@@ -2,6 +2,7 @@
 /* @var $this TaxistaController */
 /* @var $model Taxista */
 
+$this->pageTitle=Yii::app()->name.' - Registrar Taxista';
 $this->breadcrumbs=array(
 	'Taxistas'=>array('index'),
 	'Registrar',

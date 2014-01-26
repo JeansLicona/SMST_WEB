@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 	$model->id_taxista=>array('view','id'=>$model->id_taxista),
 	'Editar',
 );
-
+$this->pageTitle=Yii::app()->name.' - Editar Taxista';
 $this->menu=array(
 	array('label'=>'Listar Taxistas', 'url'=>array('index')),
 	array('label'=>'Registrar Taxista', 'url'=>array('usuario/create')), //cambiar a que dirija a create usuario
