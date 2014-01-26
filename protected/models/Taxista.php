@@ -35,8 +35,8 @@ class Taxista extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_taxista, fk_equipo, direccion_taxista, telefono_taxista, company_taxista, numero_taxista, activo', 'required'),
-			array('id_taxista, fk_equipo, activo', 'numerical', 'integerOnly'=>true),
+			array('fk_equipo, direccion_taxista, telefono_taxista, company_taxista, numero_taxista, activo', 'required'),
+			array('fk_equipo, activo', 'numerical', 'integerOnly'=>true),
 			array('direccion_taxista, company_taxista', 'length', 'max'=>100),
 			array('telefono_taxista, numero_taxista', 'length', 'max'=>10),
 			// The following rule is used by search().
@@ -65,12 +65,12 @@ class Taxista extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_taxista' => 'Id Taxista',
-			'fk_equipo' => 'Fk Equipo',
+			'id_taxista' => '',
+			'fk_equipo' => 'Equipo',
 			'direccion_taxista' => 'Direccion Taxista',
-			'telefono_taxista' => 'Telefono Taxista',
-			'company_taxista' => 'Company Taxista',
-			'numero_taxista' => 'Numero Taxista',
+			'telefono_taxista' => 'Telefono del Taxista',
+			'company_taxista' => 'Compañia del Taxista',
+			'numero_taxista' => 'Numero del Taxista',
 			'activo' => 'Activo',
 		);
 	}

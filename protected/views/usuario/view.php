@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Usuario #<?php echo $model->id_usuario; ?></h1>
+<h1>Usuario <?php echo $model->nombre_usuario; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -25,7 +25,7 @@ $this->menu=array(
 		'nombre_usuario',
 		'apellido_usuario',
 		'username',
-		'password_hash',
+		
 		'tipo_usuario',
 		'activo',
 	),
