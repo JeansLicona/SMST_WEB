@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Taxista', 'url'=>array('index')),
-	array('label'=>'Create Taxista', 'url'=>array('create')),
-	array('label'=>'Update Taxista', 'url'=>array('update', 'id'=>$model->id_taxista)),
-	array('label'=>'Delete Taxista', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_taxista),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Taxista', 'url'=>array('admin')),
+	array('label'=>'Listar Taxistas', 'url'=>array('index')),
+	array('label'=>'Registar Taxista', 'url'=>array('usuario/create')),
+	array('label'=>'Editar Taxista', 'url'=>array('update', 'id'=>$model->id_taxista)),
+	array('label'=>'Eliminar Taxista', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_taxista),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Administrar Taxistas', 'url'=>array('admin')),
 );
 ?>
 
