@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 	$model->id_usuario,
 );
 
-$this->pageTitle=Yii::app()->name.' - Ver Usuarios';
+$this->pageTitle=Yii::app()->name.' - Ver Usuario';
 
 $this->menu=array(
 	array('label'=>'Listar Usuario', 'url'=>array('index')),
