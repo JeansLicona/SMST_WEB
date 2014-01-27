@@ -1,7 +1,7 @@
 <?php
 	Yii::app()->clientscript
 		// use it when you need it!
-		
+
 		->registerCssFile( Yii::app()->theme->baseUrl . '/css/bootstrap.css' )
 		->registerCssFile( Yii::app()->theme->baseUrl . '/css/bootstrap-responsive.css' )
 		->registerCoreScript( 'jquery' )
@@ -17,7 +17,7 @@
 		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-collapse.js', CClientScript::POS_END )
 		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-carousel.js', CClientScript::POS_END )
 		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-typeahead.js', CClientScript::POS_END )
-		
+
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -52,18 +52,19 @@
 						'activeCssClass'	=> 'active',
 						'items'=>array(
 							array('label'=>'Inicio', 'url'=>array('/site/index')),
+							array('label'=>'Reporte Global', 'url'=>array('/solicitud/admin')),
 							array('label'=>'Acerca de', 'url'=>array('/site/page', 'view'=>'about')),
 							array('label'=>'Contáctenos', 'url'=>array('/site/contact')),
 							array('label'=>'Iniciar sesión', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 							array('label'=>'Cerrar sesión ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 						),
 					)); ?>
-					
+
 				</div><!--/.nav-collapse -->
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="cont">
 	<div class="container-fluid">
 	  <?php if(isset($this->breadcrumbs)):?>
@@ -78,13 +79,13 @@
 			)); ?>
 		<!-- breadcrumbs -->
 	  <?php endif?>
-	
+
 	<?php echo $content ?>
-	
-	
+
+
 	</div><!--/.fluid-container-->
 	</div>
-	
+
 	<div class="extra">
 	  <div class="container">
 <!--		<div class="row">
@@ -96,8 +97,8 @@
 					<li><a href="#">Subheading 1.3</a></li>
 					<li><a href="#">Subheading 1.4</a></li>
 				</ul>
-			</div>  /span3 
-			
+			</div>  /span3
+
 			<div class="col-md-3">
 				<h4>Heading 2</h4>
 				<ul>
@@ -106,18 +107,18 @@
 					<li><a href="#">Subheading 2.3</a></li>
 					<li><a href="#">Subheading 2.4</a></li>
 				</ul>
-			</div>  /span3 
-			
+			</div>  /span3
+
 			<div class="col-md-3">
-				<h4>Heading 3</h4>	
+				<h4>Heading 3</h4>
 				<ul>
 					<li><a href="#">Subheading 3.1</a></li>
 					<li><a href="#">Subheading 3.2</a></li>
 					<li><a href="#">Subheading 3.3</a></li>
 					<li><a href="#">Subheading 3.4</a></li>
 				</ul>
-			</div>  /span3 
-			
+			</div>  /span3
+
 			<div class="col-md-3">
 				<h4>Heading 4</h4>
 				<ul>
@@ -126,11 +127,11 @@
 					<li><a href="#">Subheading 4.3</a></li>
 					<li><a href="#">Subheading 4.4</a></li>
 				</ul>
-				</div>  /span3 
+				</div>  /span3
 			</div>  /row -->
 		</div> <!-- /container -->
 	</div>
-	
+
 	<div class="footer">
             <div class="container">
                 <div class="row">

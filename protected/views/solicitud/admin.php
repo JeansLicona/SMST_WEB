@@ -16,7 +16,6 @@ $this->breadcrumbs=array(
 	'columns'=>array(
 		'id_solicitud',
 		array(
-			'name'=>'fk_taxista',
 			'value'=>'$data->taxista->idTaxista->nombre_usuario',
 			'header'=>'Taxista',
 		),
