@@ -5,9 +5,9 @@
 $this->breadcrumbs=array(
 	'Usuarios'=>array('index'),
 	$model->id_usuario=>array('view','id'=>$model->id_usuario),
-	'Update',
+	'Editar',
 );
-
+$this->pageTitle=Yii::app()->name.' - Editar Usuarios';
 $this->menu=array(
 	array('label'=>'Listar Usuarios', 'url'=>array('index')),
 	array('label'=>'Registar Usuario', 'url'=>array('create')),

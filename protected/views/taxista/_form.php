@@ -15,13 +15,13 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Los campos con <span class="required">*</span> son requeridos</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_taxista'); ?>
-		<?php echo $form->textField($model,'id_taxista'); ?>
+		<?php echo $form->hiddenField($model,'id_taxista',array('value' => $model->id_taxista)); ?>
 		<?php echo $form->error($model,'id_taxista'); ?>
 	</div>
 
@@ -57,12 +57,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'activo'); ?>
-		<?php echo $form->textField($model,'activo'); ?>
+		<?php echo $form->dropDownList($model, 'activo', array('0' => 'No',
+            '1' => 'Si',), array('empty' => 'Seleccione la Categoria')); ?>
 		<?php echo $form->error($model,'activo'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Editar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

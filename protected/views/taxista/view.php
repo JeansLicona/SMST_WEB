@@ -7,21 +7,24 @@ $this->breadcrumbs=array(
 	$model->id_taxista,
 );
 
+$this->pageTitle=Yii::app()->name.' - Ver Taxista';
+
 $this->menu=array(
-	array('label'=>'List Taxista', 'url'=>array('index')),
-	array('label'=>'Create Taxista', 'url'=>array('create')),
-	array('label'=>'Update Taxista', 'url'=>array('update', 'id'=>$model->id_taxista)),
-	array('label'=>'Delete Taxista', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_taxista),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Taxista', 'url'=>array('admin')),
+	array('label'=>'Listar Taxistas', 'url'=>array('index')),
+	array('label'=>'Registar Taxista', 'url'=>array('usuario/create')),
+	array('label'=>'Editar Taxista', 'url'=>array('update', 'id'=>$model->id_taxista)),
+	array('label'=>'Eliminar Taxista', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_taxista),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Administrar Taxistas', 'url'=>array('admin')),
 );
+$usuario=Usuario::model()->findByPk($model->id_taxista);
 ?>
 
-<h1>View Taxista #<?php echo $model->id_taxista; ?></h1>
+<h1> Taxista <?php echo $usuario->nombre_usuario; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id_taxista',
+		
 		'fk_equipo',
 		'direccion_taxista',
 		'telefono_taxista',

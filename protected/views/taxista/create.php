@@ -2,17 +2,18 @@
 /* @var $this TaxistaController */
 /* @var $model Taxista */
 
+$this->pageTitle=Yii::app()->name.' - Registrar Taxista';
 $this->breadcrumbs=array(
 	'Taxistas'=>array('index'),
-	'Create',
+	'Registrar',
 );
 
 $this->menu=array(
-	array('label'=>'List Taxista', 'url'=>array('index')),
-	array('label'=>'Manage Taxista', 'url'=>array('admin')),
+	array('label'=>'Listar Taxistas', 'url'=>array('index')),
+	array('label'=>'Administrar Taxistas', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Taxista</h1>
+<h1>Registrar Taxista</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
