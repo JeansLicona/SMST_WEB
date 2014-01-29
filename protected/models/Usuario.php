@@ -22,19 +22,19 @@ class Usuario extends CActiveRecord {
     /**
      * @return string the associated database table name
      */
-    public $confirmarContrasena;
+//    public $confirmarContrasena;
 
     public function tableName() {
         return 'usuario';
     }
 
-    public function beforeSave() {
-        if (parent::beforeSave() && $this->confirmarContrasena == $this->password_hash) {
-            $this->password_hash = crypt($this->password_hash);
-            return true;
-        }
-        return false;
-    }
+//    public function beforeSave() {
+//        if (parent::beforeSave() && $this->confirmarContrasena == $this->password_hash) {
+//            $this->password_hash = crypt($this->password_hash);
+//            return true;
+//        }
+//        return false;        
+//    }
 
     /**
      * @return array validation rules for model attributes.
@@ -43,11 +43,11 @@ class Usuario extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nombre_usuario, apellido_usuario, username, password_hash, tipo_usuario, activo, confirmarContrasena', 'required'),
+            array('nombre_usuario, apellido_usuario, username, password_hash, tipo_usuario, activo', 'required'),
             array('username', 'unique'),
             array('activo', 'numerical', 'integerOnly' => true),
             array('nombre_usuario', 'length', 'max' => 30),
-            array('password_hash', 'length', 'max' => 30, 'min' => 8),
+            array('password_hash', 'length', 'max' => 100, 'min' => 8),
             array('apellido_usuario', 'length', 'max' => 50),
             array('username', 'length', 'max' => 15),
             array('tipo_usuario', 'length', 'max' => 10),
@@ -108,7 +108,7 @@ class Usuario extends CActiveRecord {
         $criteria->compare('username', $this->username, true);
         $criteria->compare('password_hash', $this->password_hash, true);
         $criteria->compare('tipo_usuario', $this->tipo_usuario, true);
-        $criteria->compare('activo', $this->activo);
+        $criteria->compare('activo', 1);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,

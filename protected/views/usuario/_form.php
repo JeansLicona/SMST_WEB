@@ -46,12 +46,6 @@
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'confirmarContrasena'); ?>
-        <?php echo $form->passwordField($model, 'confirmarContrasena', array('size' => 35, 'maxlength' => 35)); ?>
-        <?php echo $form->error($model, 'confirmarContrasena'); ?>
-    </div>
-
-    <div class="row">
         <?php echo $form->labelEx($model, 'tipo_usuario'); ?>
         <?php 
         echo $form->dropDownList($model, 'tipo_usuario', array('operador' => 'Operador','taxista' => 'Taxista',

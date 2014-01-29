@@ -70,6 +70,7 @@ class UsuarioController extends Controller
 		if(isset($_POST['Usuario']))
 		{
 			$model->attributes=$_POST['Usuario'];
+                        $model->password_hash=  crypt($model->password_hash);
 			if($model->save()){
                             if($model->tipo_usuario=='taxista'){
                                 $this->redirect(array('taxista/create&id='. $model->id_usuario));
@@ -115,11 +116,13 @@ class UsuarioController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		$model =  $this->loadModel($id);
+                $model->activo = 0;
+                $model->save(false);                
+                    
+                //if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+                if(!isset($_GET['ajax']))
+                    $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
 	/**
