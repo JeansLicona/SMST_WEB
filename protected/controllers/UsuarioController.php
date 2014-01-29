@@ -118,7 +118,12 @@ class UsuarioController extends Controller
 	{
 		$model =  $this->loadModel($id);
                 $model->activo = 0;
-                $model->save(false);                
+                $model->save(false);
+                if($model->tipo_usuario=="taxista"){
+                    $taxista=  Taxista::model()->findByPk($model->id_usuario);
+                    $taxista->activo=0;
+                    $taxista->save();
+                }
                     
                 //if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
                 if(!isset($_GET['ajax']))

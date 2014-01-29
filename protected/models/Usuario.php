@@ -22,19 +22,10 @@ class Usuario extends CActiveRecord {
     /**
      * @return string the associated database table name
      */
-//    public $confirmarContrasena;
 
     public function tableName() {
         return 'usuario';
     }
-
-//    public function beforeSave() {
-//        if (parent::beforeSave() && $this->confirmarContrasena == $this->password_hash) {
-//            $this->password_hash = crypt($this->password_hash);
-//            return true;
-//        }
-//        return false;        
-//    }
 
     /**
      * @return array validation rules for model attributes.
