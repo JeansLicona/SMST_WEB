@@ -25,11 +25,10 @@ $usuario=Usuario::model()->findByPk($model->id_taxista);
 	'data'=>$model,
 	'attributes'=>array(
 		
-		'fk_equipo',
+		'fkEquipo.modelo_equipo',
 		'direccion_taxista',
 		'telefono_taxista',
 		'company_taxista',
 		'numero_taxista',
-		'activo',
 	),
 )); ?>
