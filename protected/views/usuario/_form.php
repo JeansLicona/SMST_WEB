@@ -48,8 +48,8 @@
     <div class="row">
         <?php echo $form->labelEx($model, 'tipo_usuario'); ?>
         <?php 
-        echo $form->dropDownList($model, 'tipo_usuario', array('operador' => 'Operador','taxista' => 'Taxista',
-            'cliente' => 'Cliente'), array('empty' => 'Seleccione la Categoria'));
+        echo $form->dropDownList($model, 'tipo_usuario', array('operador' => 'Operador','taxista' => 'Taxista')
+                , array('empty' => 'Seleccione la Categoria'));
         ?>
         <?php echo $form->error($model, 'tipo_usuario'); ?>
     </div>

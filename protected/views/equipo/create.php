@@ -4,15 +4,15 @@
 
 $this->breadcrumbs=array(
 	'Equipos'=>array('index'),
-	'Create',
+	'Registrar',
 );
-
+$this->pageTitle=Yii::app()->name.' - Registrar Equipo';
 $this->menu=array(
-	array('label'=>'List Equipo', 'url'=>array('index')),
-	array('label'=>'Manage Equipo', 'url'=>array('admin')),
+	array('label'=>'Listar Equipo', 'url'=>array('index')),
+	array('label'=>'Administrar Equipo', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Equipo</h1>
+<h1>Registrar Equipo</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

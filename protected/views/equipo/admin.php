@@ -4,12 +4,13 @@
 
 $this->breadcrumbs=array(
 	'Equipos'=>array('index'),
-	'Manage',
+	'Administrar',
 );
 
+$this->pageTitle=Yii::app()->name.' - Administrar Equipos';
 $this->menu=array(
-	array('label'=>'List Equipo', 'url'=>array('index')),
-	array('label'=>'Create Equipo', 'url'=>array('create')),
+	array('label'=>'Listar Equipo', 'url'=>array('index')),
+	array('label'=>'Registrar Equipo', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,14 +27,14 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Equipos</h1>
+<h1>Administrar Equipos</h1>
 
 <p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+También puede escribir un operador de comparación(<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
+o <b>=</b>) al comienzo de cada uno de sus valores de búsqueda para especificar cómo se debe hacer la comparación.
 </p>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Búsqueda Avanzada','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -49,7 +50,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'modelo_equipo',
 		'marca_equipo',
 		'fecha_compra',
-		'activo',
 		array(
 			'class'=>'CButtonColumn',
 		),

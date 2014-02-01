@@ -6,13 +6,12 @@ $this->breadcrumbs=array(
 	'Equipos'=>array('index'),
 	$model->id_equipo,
 );
-
+$this->pageTitle=Yii::app()->name.' - Ver Equipo';
 $this->menu=array(
-	array('label'=>'List Equipo', 'url'=>array('index')),
-	array('label'=>'Create Equipo', 'url'=>array('create')),
-	array('label'=>'Update Equipo', 'url'=>array('update', 'id'=>$model->id_equipo)),
-	array('label'=>'Delete Equipo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_equipo),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Equipo', 'url'=>array('admin')),
+	array('label'=>'Listar Equipo', 'url'=>array('index')),
+	array('label'=>'Registrar Equipo', 'url'=>array('create')),
+	array('label'=>'Editar Equipo', 'url'=>array('update', 'id'=>$model->id_equipo)),
+	array('label'=>'Administrar Equipo', 'url'=>array('admin')),
 );
 ?>
 
