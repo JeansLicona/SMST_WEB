@@ -3,7 +3,7 @@
         <div class="span3">
          <?php
 			$this->beginWidget('zii.widgets.CPortlet', array(
-				'title'=>'Operaciones',
+				'title'=>'Servicios',
 			));
 			$this->widget('zii.widgets.CMenu', array(
 				'items'=>$this->menu,

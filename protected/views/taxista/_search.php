@@ -82,7 +82,7 @@ $equiposBusqueda=  Equipo::model()->findAll();
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
     'id' => 'taxista-grid',
-    'dataProvider' => $model->search(),
+    'dataProvider' => $model->searchAdvance(),
     'columns' => array(
         'fkEquipo.modelo_equipo',
         'direccion_taxista',

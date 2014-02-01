@@ -105,6 +105,25 @@ class Taxista extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        
+        public function searchAdvance()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('id_taxista',$this->id_taxista);
+		$criteria->compare('fk_equipo',$this->fk_equipo);
+		$criteria->compare('direccion_taxista',$this->direccion_taxista,true);
+		$criteria->compare('telefono_taxista',$this->telefono_taxista,true);
+		$criteria->compare('company_taxista',$this->company_taxista,true);
+		$criteria->compare('numero_taxista',$this->numero_taxista,true);
+		$criteria->compare('activo',2);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
 
 	/**
 	 * Returns the static model of the specified AR class.

@@ -1,12 +1,13 @@
 <?php
 /* @var $this TaxistaController */
 /* @var $data Taxista */
+$usuario=Usuario::model()->findByPk($data->id_taxista);
 ?>
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id_taxista')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id_taxista), array('view', 'id'=>$data->id_taxista)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Taxista')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($usuario->nombre_usuario), array('view', 'id'=>$data->id_taxista)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fk_equipo')); ?>:</b>
