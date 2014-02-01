@@ -2,6 +2,7 @@
 /* @var $this TaxistaController */
 /* @var $model Taxista */
 /* @var $form CActiveForm */
+$equiposBusqueda=  Equipo::model()->findAll();
 ?>
 
 <div class="form">
@@ -30,10 +31,8 @@
     <div class="row">
         <?php echo $form->labelEx($model, 'fk_equipo'); ?>
         <?php
-        echo $form->textField($model, 'fk_equipo', array('size' => 1, 'maxlength' => 10));
-//        $equipos = CHtml::listData($equiposBusqueda, 'id_usuario', 'nombres');
-//        echo $form->dropDownList($model, 'fk_equipo', $equipos, array('empty' => 'Seleccione Equipo'));
-//        
+        $equipos = CHtml::listData($equiposBusqueda, 'id_equipo', 'modelo_equipo');
+        echo $form->dropDownList($model, 'fk_equipo', $equipos, array('empty' => 'Seleccione Equipo'));    
         ?>
         <?php echo $form->error($model, 'fk_equipo'); ?>
     </div>
