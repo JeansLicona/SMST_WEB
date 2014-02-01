@@ -29,8 +29,15 @@
 	<?php echo CHtml::encode($data->numero_taxista); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('activo')); ?>:</b>
-	<?php echo CHtml::encode($data->activo); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Estado')); ?>:</b>
+	<?php 
+        if($data->activo==1){
+            echo "Activo";
+        }else{
+            echo "Inactivo";
+        }
+        ?>
+        <br/>
 	<br />
 
 

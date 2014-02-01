@@ -72,7 +72,7 @@ class Usuario extends CActiveRecord {
             'username' => 'Nombre de Usuario',
             'password_hash' => 'Contraseña',
             'tipo_usuario' => 'Tipo Usuario',
-            'activo' => 'Activo',
+            'activo' => 'Estado',
         );
     }
 

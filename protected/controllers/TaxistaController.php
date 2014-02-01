@@ -64,9 +64,11 @@ class TaxistaController extends Controller
 	{
 		$model=new Taxista;
                 $idTaxista=$_GET['id'];
+                $activo=$_GET['activo'];
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
                 $model->id_taxista=$idTaxista;
+                $model->activo=$activo;
 		if(isset($_POST['Taxista']))
 		{
 			$model->attributes=$_POST['Taxista'];

@@ -56,8 +56,8 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'activo'); ?>
-        <?php echo $form->dropDownList($model, 'activo', array('0' => 'No',
-            '1' => 'Si',), array('empty' => 'Seleccione la Categoria')); ?>
+        <?php echo $form->dropDownList($model, 'activo', array('0' => 'Inactivo',
+            '1' => 'Activo',), array('empty' => 'Seleccione la Categoria')); ?>
         <?php echo $form->error($model, 'activo'); ?>
     </div>
 

@@ -35,7 +35,7 @@ class Taxista extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('fk_equipo, direccion_taxista, telefono_taxista, company_taxista, numero_taxista, activo', 'required'),
+			array('fk_equipo, direccion_taxista, telefono_taxista, company_taxista, numero_taxista', 'required'),
 			array('fk_equipo, activo', 'numerical', 'integerOnly'=>true),
 			array('direccion_taxista, company_taxista', 'length', 'max'=>100),
 			array('telefono_taxista, numero_taxista', 'length', 'max'=>10),
@@ -71,7 +71,7 @@ class Taxista extends CActiveRecord
 			'telefono_taxista' => 'Telefono del Taxista',
 			'company_taxista' => 'Compañia del Taxista',
 			'numero_taxista' => 'Numero del Taxista',
-			'activo' => 'Activo',
+			'activo' => '',
 		);
 	}
 

@@ -73,7 +73,7 @@ class UsuarioController extends Controller
                         $model->password_hash=  crypt($model->password_hash);
 			if($model->save()){
                             if($model->tipo_usuario=='taxista'){
-                                $this->redirect(array('taxista/create&id='. $model->id_usuario));
+                                $this->redirect(array('taxista/create&id='. $model->id_usuario.'&activo='.$model->activo));
                             }else{
                                 $this->redirect(array('view','id'=>$model->id_usuario));
                             }
