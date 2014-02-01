@@ -29,6 +29,6 @@ $this->menu=array(
 		'username',
 		
 		'tipo_usuario',
-		'activo',
+		
 	),
 )); ?>
