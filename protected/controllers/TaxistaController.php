@@ -28,7 +28,7 @@ class TaxistaController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','search'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -104,6 +104,17 @@ class TaxistaController extends Controller
 			'model'=>$model,
 		));
 	}
+        
+        public function actionSearch(){
+            $model=new Taxista('search');
+            $model->unsetAttributes();
+            if(isset($_GET['Taxista']))
+			$model->attributes=$_GET['Taxista'];
+
+		$this->render('_search',array(
+			'model'=>$model,
+		));
+        }
 
 	/**
 	 * Deletes a particular model.
