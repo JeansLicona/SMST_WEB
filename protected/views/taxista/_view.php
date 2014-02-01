@@ -2,6 +2,7 @@
 /* @var $this TaxistaController */
 /* @var $data Taxista */
 $usuario=Usuario::model()->findByPk($data->id_taxista);
+$equipo=  Equipo::model()->findByPk($data->fk_equipo);
 ?>
 
 <div class="view">
@@ -11,7 +12,7 @@ $usuario=Usuario::model()->findByPk($data->id_taxista);
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fk_equipo')); ?>:</b>
-	<?php echo CHtml::encode($data->fk_equipo); ?>
+	<?php echo CHtml::encode($equipo->modelo_equipo); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('direccion_taxista')); ?>:</b>
