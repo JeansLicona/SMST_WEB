@@ -8,6 +8,7 @@ $this->breadcrumbs=array(
 	'Iniciar sesion',
 );
 ?>
+
 <div class="clearfix">
 <div class="pull-left" id='imagen'>
 	<?php 
