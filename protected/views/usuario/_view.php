@@ -30,15 +30,16 @@
 	<?php echo CHtml::encode($data->tipo_usuario); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('activo')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Estado')); ?>:</b>
 	<?php 
         if($data->activo==1){
-            echo "Si";
+            echo "Activo";
         }else{
-            echo "No";
+            echo "Inactivo";
         }
         ?>
 	<br />
+        <br />
 
 
 </div>

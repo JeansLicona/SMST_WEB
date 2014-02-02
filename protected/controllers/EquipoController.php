@@ -1,6 +1,6 @@
 <?php
 
-class TaxistaController extends Controller
+class EquipoController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -28,7 +28,7 @@ class TaxistaController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','search'),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -62,18 +62,16 @@ class TaxistaController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Taxista;
-                $idTaxista=$_GET['id'];
-                $activo=$_GET['activo'];
+		$model=new Equipo;
+
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-                $model->id_taxista=$idTaxista;
-                $model->activo=$activo;
-		if(isset($_POST['Taxista']))
+
+		if(isset($_POST['Equipo']))
 		{
-			$model->attributes=$_POST['Taxista'];
+			$model->attributes=$_POST['Equipo'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_taxista));
+				$this->redirect(array('view','id'=>$model->id_equipo));
 		}
 
 		$this->render('create',array(
@@ -93,28 +91,17 @@ class TaxistaController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Taxista']))
+		if(isset($_POST['Equipo']))
 		{
-			$model->attributes=$_POST['Taxista'];
+			$model->attributes=$_POST['Equipo'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_taxista));
+				$this->redirect(array('view','id'=>$model->id_equipo));
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
 		));
 	}
-        
-        public function actionSearch(){
-            $model=new Taxista('search');
-            $model->unsetAttributes();
-            if(isset($_GET['Taxista']))
-			$model->attributes=$_GET['Taxista'];
-
-		$this->render('_search',array(
-			'model'=>$model,
-		));
-        }
 
 	/**
 	 * Deletes a particular model.
@@ -135,7 +122,7 @@ class TaxistaController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Taxista');
+		$dataProvider=new CActiveDataProvider('Equipo');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -146,10 +133,10 @@ class TaxistaController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Taxista('search');
+		$model=new Equipo('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Taxista']))
-			$model->attributes=$_GET['Taxista'];
+		if(isset($_GET['Equipo']))
+			$model->attributes=$_GET['Equipo'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -160,12 +147,12 @@ class TaxistaController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Taxista the loaded model
+	 * @return Equipo the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Taxista::model()->findByPk($id);
+		$model=Equipo::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -173,11 +160,11 @@ class TaxistaController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Taxista $model the model to be validated
+	 * @param Equipo $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='taxista-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='equipo-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

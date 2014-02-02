@@ -35,7 +35,7 @@ class Taxista extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('fk_equipo, direccion_taxista, telefono_taxista, company_taxista, numero_taxista, activo', 'required'),
+			array('fk_equipo, direccion_taxista, telefono_taxista, company_taxista, numero_taxista', 'required'),
 			array('fk_equipo, activo', 'numerical', 'integerOnly'=>true),
 			array('direccion_taxista, company_taxista', 'length', 'max'=>100),
 			array('telefono_taxista, numero_taxista', 'length', 'max'=>10),
@@ -71,7 +71,7 @@ class Taxista extends CActiveRecord
 			'telefono_taxista' => 'Telefono del Taxista',
 			'company_taxista' => 'Compañia del Taxista',
 			'numero_taxista' => 'Numero del Taxista',
-			'activo' => 'Activo',
+			'activo' => '',
 		);
 	}
 
@@ -100,6 +100,25 @@ class Taxista extends CActiveRecord
 		$criteria->compare('company_taxista',$this->company_taxista,true);
 		$criteria->compare('numero_taxista',$this->numero_taxista,true);
 		$criteria->compare('activo',$this->activo);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+        
+        public function searchAdvance()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('id_taxista',$this->id_taxista);
+		$criteria->compare('fk_equipo',$this->fk_equipo);
+		$criteria->compare('direccion_taxista',$this->direccion_taxista,true);
+		$criteria->compare('telefono_taxista',$this->telefono_taxista,true);
+		$criteria->compare('company_taxista',$this->company_taxista,true);
+		$criteria->compare('numero_taxista',$this->numero_taxista,true);
+		$criteria->compare('activo',2);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

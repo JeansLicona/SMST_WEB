@@ -46,24 +46,18 @@
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'confirmarContrasena'); ?>
-        <?php echo $form->passwordField($model, 'confirmarContrasena', array('size' => 35, 'maxlength' => 35)); ?>
-        <?php echo $form->error($model, 'confirmarContrasena'); ?>
-    </div>
-
-    <div class="row">
         <?php echo $form->labelEx($model, 'tipo_usuario'); ?>
         <?php 
-        echo $form->dropDownList($model, 'tipo_usuario', array('operador' => 'Operador','taxista' => 'Taxista',
-            'cliente' => 'Cliente'), array('empty' => 'Seleccione la Categoria'));
+        echo $form->dropDownList($model, 'tipo_usuario', array('operador' => 'Operador','taxista' => 'Taxista')
+                , array('empty' => 'Seleccione la Categoria'));
         ?>
         <?php echo $form->error($model, 'tipo_usuario'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'activo'); ?>
-        <?php echo $form->dropDownList($model, 'activo', array('0' => 'No',
-            '1' => 'Si',), array('empty' => 'Seleccione la Categoria')); ?>
+        <?php echo $form->dropDownList($model, 'activo', array('0' => 'Inactivo',
+            '1' => 'Activo',), array('empty' => 'Seleccione la Categoria')); ?>
         <?php echo $form->error($model, 'activo'); ?>
     </div>
 
