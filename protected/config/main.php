@@ -11,7 +11,7 @@ return array(
         
         'language'=>'es',
         'theme'=>'blackboot',
-        //'defaultController' => 'Site/login',
+        'defaultController' => 'Site/login',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
