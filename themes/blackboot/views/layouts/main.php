@@ -33,9 +33,12 @@
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/bootstrap-responsive.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/estilo.css" />
 <!-- Le fav and touch icons -->
 </head>
-
+<?php
+	$user = (isset(Yii::app()->user->user))? Yii::app()->user->user : "";
+ ?>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
@@ -56,7 +59,7 @@
 							array('label'=>'Acerca de', 'url'=>array('/site/page', 'view'=>'about')),
 							array('label'=>'Contáctenos', 'url'=>array('/site/contact')),
 							array('label'=>'Iniciar sesión', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-							array('label'=>'Cerrar sesión ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+							array('label'=>'Cerrar sesión ('.$user.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 						),
 					)); ?>
 
