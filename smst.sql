@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 25-01-2014 a las 17:50:51
+-- Tiempo de generación: 03-02-2014 a las 23:55:05
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.3.13
 
@@ -57,7 +57,14 @@ CREATE TABLE IF NOT EXISTS `equipo` (
   `fecha_compra` date NOT NULL,
   `activo` smallint(1) NOT NULL,
   PRIMARY KEY (`id_equipo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `equipo`
+--
+
+INSERT INTO `equipo` (`id_equipo`, `modelo_equipo`, `marca_equipo`, `fecha_compra`, `activo`) VALUES
+(1, 'asd', 'asda', '2014-01-26', 1);
 
 -- --------------------------------------------------------
 
@@ -130,6 +137,13 @@ CREATE TABLE IF NOT EXISTS `taxista` (
   UNIQUE KEY `fk_equipo` (`fk_equipo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `taxista`
+--
+
+INSERT INTO `taxista` (`id_taxista`, `fk_equipo`, `direccion_taxista`, `telefono_taxista`, `company_taxista`, `numero_taxista`, `activo`) VALUES
+(4, 1, '21', '32', '2131', '213213', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -141,11 +155,21 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `nombre_usuario` varchar(30) CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL,
   `apellido_usuario` varchar(50) CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL,
   `username` varchar(15) CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL,
-  `password_hash` varchar(30) CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL,
+  `password_hash` varchar(100) CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL,
   `tipo_usuario` char(10) CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL,
   `activo` smallint(1) NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id_usuario`, `nombre_usuario`, `apellido_usuario`, `username`, `password_hash`, `tipo_usuario`, `activo`) VALUES
+(4, 'Jose', 'Licona', 'JoseL', '$1$Th..ga5.$bFY/zjbtjUWfnCb1yw', 'taxista', 1),
+(5, 'Juan ', 'Borges', 'Juanito', '$1$0Z/.Hp..$20/KVksZu78VE38BgslHB0', 'operador', 1),
+(6, 'Jeans', 'Licona Dorantes', 'Jeans', '$1$7A1.CY0.$ylEyC4WaCXCGrJoVPZVwV0', 'operador', 1),
+(8, 'Jose Hernan', 'Licona Albronoz', 'Josesito', '$1$fV4.6z1.$tOhii6eFIaWPTSZAkydxe0', 'operador', 1);
 
 --
 -- Restricciones para tablas volcadas
@@ -174,8 +198,8 @@ ALTER TABLE `solicitud`
 -- Filtros para la tabla `taxista`
 --
 ALTER TABLE `taxista`
-  ADD CONSTRAINT `fk_taxista_usuario` FOREIGN KEY (`id_taxista`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_equipo_taxista` FOREIGN KEY (`fk_equipo`) REFERENCES `equipo` (`id_equipo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_equipo_taxista` FOREIGN KEY (`fk_equipo`) REFERENCES `equipo` (`id_equipo`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_taxista_usuario` FOREIGN KEY (`id_taxista`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
