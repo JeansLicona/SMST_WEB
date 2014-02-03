@@ -1,21 +1,21 @@
 <?php
-/* @var $this TaxistaController */
-/* @var $model Taxista */
-/* @var $form CActiveForm */
-$equiposBusqueda=  Equipo::model()->findAll();
+    /* @var $this TaxistaController */
+    /* @var $model Taxista */
+    /* @var $form CActiveForm */
+    $equiposBusqueda = Equipo::model()->findAll();
 ?>
 
 <div class="form">
 
     <?php
-    $form = $this->beginWidget('CActiveForm', array(
-        'id' => 'taxista-form',
-        // Please note: When you enable ajax validation, make sure the corresponding
-        // controller action is handling ajax validation correctly.
-        // There is a call to performAjaxValidation() commented in generated controller code.
-        // See class documentation of CActiveForm for details on this.
-        'enableAjaxValidation' => false,
-    ));
+        $form = $this->beginWidget('CActiveForm', array(
+            'id' => 'taxista-form',
+            // Please note: When you enable ajax validation, make sure the corresponding
+            // controller action is handling ajax validation correctly.
+            // There is a call to performAjaxValidation() commented in generated controller code.
+            // See class documentation of CActiveForm for details on this.
+            'enableAjaxValidation' => false,
+        ));
     ?>
 
     <p class="note">Los campos con <span class="required">*</span> son requeridos</p>
@@ -31,8 +31,8 @@ $equiposBusqueda=  Equipo::model()->findAll();
     <div class="row">
         <?php echo $form->labelEx($model, 'fk_equipo'); ?>
         <?php
-        $equipos = CHtml::listData($equiposBusqueda, 'id_equipo', 'modelo_equipo');
-        echo $form->dropDownList($model, 'fk_equipo', $equipos, array('empty' => 'Seleccione Equipo'));    
+            $equipos = CHtml::listData($equiposBusqueda, 'id_equipo', 'modelo_equipo');
+            echo $form->dropDownList($model, 'fk_equipo', $equipos, array('empty' => 'Seleccione Equipo'));
         ?>
         <?php echo $form->error($model, 'fk_equipo'); ?>
     </div>

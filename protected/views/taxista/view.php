@@ -10,7 +10,6 @@ $this->breadcrumbs=array(
 $this->pageTitle=Yii::app()->name.' - Ver Taxista';
 
 $this->menu=array(
-	array('label'=>'Listar Taxistas', 'url'=>array('index')),
 	array('label'=>'Registar Taxista', 'url'=>array('usuario/create')),
 	array('label'=>'Editar Taxista', 'url'=>array('update', 'id'=>$model->id_taxista)),
 	array('label'=>'Eliminar Taxista', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_taxista),'confirm'=>'Are you sure you want to delete this item?')),

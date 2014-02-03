@@ -9,7 +9,6 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Listar Taxistas', 'url'=>array('index')),
 	array('label'=>'Administrar Taxistas', 'url'=>array('admin')),
 );
 ?>

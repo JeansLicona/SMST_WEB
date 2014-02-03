@@ -1,34 +1,29 @@
 <?php
-/* @var $this TaxistaController */
-/* @var $model Taxista */
-/* @var $form CActiveForm */
+    /* @var $this TaxistaController */
+    /* @var $model Taxista */
+    /* @var $form CActiveForm */
 
-$this->breadcrumbs = array(
-    'Taxistas' => array('index'),
-    'Búsqueda Avanzada',
-);
-$this->pageTitle = Yii::app()->name . ' - Búsqueda de Taxista';
+    $this->breadcrumbs = array(
+        'Taxistas' => array('index'),
+        'Búsqueda Avanzada',
+    );
+    $this->pageTitle = Yii::app()->name . ' - Búsqueda de Taxista';
 
-$this->menu = array(
-    array('label' => 'Listar Taxistas', 'url' => array('index')),
-    array('label' => 'Registrar Taxista', 'url' => array('usuario/create')),
-    array('label' => 'Administrar Taxistas', 'url' => array('taxista/admin')),
-);
+    $this->menu = array(
+        array('label' => 'Registrar Taxista', 'url' => array('usuario/create')),
+        array('label' => 'Administrar Taxistas', 'url' => array('taxista/admin')),
+    );
 
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
+    Yii::app()->clientScript->registerScript('search', "$('.search-button').click(function(){
 	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
+	return false;});
+        $('.search-form form').submit(function(){
 	$('#taxista-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
-	return false;
-});
-");
+	return false;});");
 
-$equiposBusqueda=  Equipo::model()->findAll();
+    $equiposBusqueda = Equipo::model()->findAll();
 ?>
 
 <h1>B&uacute;squeda avanzada de Taxistas</h1>
@@ -36,17 +31,17 @@ $equiposBusqueda=  Equipo::model()->findAll();
     <div class="wide form">
 
         <?php
-        $form = $this->beginWidget('CActiveForm', array(
-            'action' => Yii::app()->createUrl($this->route),
-            'method' => 'get',
-        ));
+            $form = $this->beginWidget('CActiveForm', array(
+                'action' => Yii::app()->createUrl($this->route),
+                'method' => 'get',
+            ));
         ?>
 
         <div class="row">
             <?php echo $form->label($model, 'fk_equipo'); ?>
             <?php
-            $equipos = CHtml::listData($equiposBusqueda, 'id_equipo', 'modelo_equipo');
-            echo $form->dropDownList($model, 'fk_equipo', $equipos, array('empty' => 'Seleccione Equipo'));
+                $equipos = CHtml::listData($equiposBusqueda, 'id_equipo', 'modelo_equipo');
+                echo $form->dropDownList($model, 'fk_equipo', $equipos, array('empty' => 'Seleccione Equipo'));
             ?>
         </div>
 
@@ -80,21 +75,21 @@ $equiposBusqueda=  Equipo::model()->findAll();
 </div>
 
 <?php
-$this->widget('zii.widgets.grid.CGridView', array(
-    'id' => 'taxista-grid',
-    'dataProvider' => $model->searchAdvance(),
-    'columns' => array(
-        'fkEquipo.modelo_equipo',
-        'direccion_taxista',
-        'telefono_taxista',
-        'company_taxista',
-        'numero_taxista',
-        /*
-          'activo',
-         */
-        array(
-            'class' => 'CButtonColumn',
+    $this->widget('zii.widgets.grid.CGridView', array(
+        'id' => 'taxista-grid',
+        'dataProvider' => $model->searchAdvance(),
+        'columns' => array(
+            'fkEquipo.modelo_equipo',
+            'direccion_taxista',
+            'telefono_taxista',
+            'company_taxista',
+            'numero_taxista',
+            /*
+              'activo',
+             */
+            array(
+                'class' => 'CButtonColumn',
+            ),
         ),
-    ),
-));
+    ));
 ?>
