@@ -19,6 +19,29 @@ class SolicitudController extends Controller
 		);
 	}
 
+	public function behaviors()
+    {
+        return array(
+            'pdfable'=>array(
+                'class' => 'ext.pdfable.Pdfable',
+
+                // Global default options for wkhtmltopdf
+                'pdfOptions' => array(
+                    'bin' => Yii::app()->params['pdf_bin'],
+                ),
+
+                // Default page options
+                'pdfPageOptions' => array(
+                    'user-style-sheet'  => Yii::getPathOfAlias('webroot') . '/css/bootstrap.css',
+                ),
+
+                // Use this to disable any hardcoded defaults
+                // 'defaultPdfOptions' => array(),
+                // 'defaultPdfPageOptions' => array(),
+            ),
+        );
+    }
+
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
@@ -32,7 +55,7 @@ class SolicitudController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update', 'admin', 'export'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -141,6 +164,27 @@ class SolicitudController extends Controller
 		$this->render('admin',array(
 			'model'=>$model,
 		));
+	}
+
+	/**
+	 * Exporta las solicitudes en formato pdf
+	 * @return [type] [description]
+	 */
+	public function actionExport(){
+		$this->layout = '//layouts/reporte';
+
+		$model = new Solicitud('search');
+
+		$criteria = new CDbCriteria;
+		$criteria->addCondition("hora_fecha_solicitud > '" . $_POST['start_date'] . " 00:00:00'" );
+		$criteria->addCondition("hora_fecha_solicitud < '" . $_POST['end_date'] . " 00:00:00'" );
+		$models = $model->findAll( $criteria );
+
+		$modelsData = array();
+		foreach ($models as $model)
+			$modelsData[] = $model->attributes;
+
+		$this->renderPdf('reporte', array('models'=>$modelsData), array(), 'reporte.pdf');
 	}
 
 	/**

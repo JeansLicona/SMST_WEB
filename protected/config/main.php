@@ -8,7 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'SMST',
-        
+
         'language'=>'es',
         'theme'=>'blackboot',
         'defaultController' => 'Site/login',
@@ -24,14 +24,13 @@ return array(
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		
+
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'1234',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-		
 	),
 
 	// application components
@@ -56,9 +55,9 @@ return array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
 		// uncomment the following to use a MySQL database
-             * 
+             *
              */
-		
+
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=smst',
 			'emulatePrepare' => true,
@@ -66,7 +65,7 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
-		
+
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
@@ -78,6 +77,12 @@ return array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
 				),
+				array(
+			        'class'=>'CFileLogRoute',
+			        'levels'=>'trace,log',
+			        'categories' => 'system.db.CDbCommand',
+			        'logFile' => 'db.log',
+			     ),
 				// uncomment the following to show log messages on web pages
 				/*
 				array(
@@ -93,5 +98,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+		'pdf_bin'=>'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe',
 	),
 );
