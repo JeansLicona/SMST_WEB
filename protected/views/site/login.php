@@ -11,7 +11,7 @@ $this->breadcrumbs=array(
 
 <div class="clearfix">
 <div class="pull-left" id='imagen'>
-	<?php 
+	<?php
 		echo CHtml::image(Yii::app()->baseUrl.'/images/logo.jpg','', array('width' =>300, 'height'=>300 ));
 	?>
 </div>
@@ -26,7 +26,7 @@ $this->breadcrumbs=array(
 		'validateOnSubmit'=>true,
 	),
 )); ?>
-	
+
 	<p class="note">Los campos con <span class="required">*</span> son requeridos.</p>
 
 	<div class="row">
@@ -41,17 +41,17 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'password'); ?>
 	</div>
 
-	<div class="row rememberMe">
+	<!-- <div class="row rememberMe">
 		<?php echo $form->checkBox($model,'rememberMe'); ?>
 		<?php echo $form->label($model,'rememberMe'); ?>
 		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
+	</div> -->
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Login'); ?>
 	</div>
 
-	
+
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
