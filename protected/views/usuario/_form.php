@@ -48,8 +48,13 @@
     <div class="row">
         <?php echo $form->labelEx($model, 'tipo_usuario'); ?>
         <?php
-            echo $form->dropDownList($model, 'tipo_usuario', array('operador' => 'Operador', 'taxista' => 'Taxista')
-                    , array('empty' => 'Seleccione la Categoria'));
+            if (Yii::app()->user->id == 'administrador') {
+                echo $form->dropDownList($model, 'tipo_usuario', array('operador' => 'Operador', 'taxista' => 'Taxista')
+                        , array('empty' => 'Seleccione la Categoria'));
+            } else {
+                echo $form->dropDownList($model, 'tipo_usuario'
+                        , array('taxista' => 'Taxista'));
+            }
         ?>
         <?php echo $form->error($model, 'tipo_usuario'); ?>
     </div>
@@ -60,13 +65,13 @@
             echo $form->dropDownList($model, 'activo', array('0' => 'Inactivo',
                 '1' => 'Activo',), array('empty' => 'Seleccione la Categoria'));
         ?>
-<?php echo $form->error($model, 'activo'); ?>
+        <?php echo $form->error($model, 'activo'); ?>
     </div>
 
     <div class="row buttons">
-<?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Editar'); ?>
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Editar'); ?>
     </div>
 
-<?php $this->endWidget(); ?>
+    <?php $this->endWidget(); ?>
 
 </div><!-- form -->
