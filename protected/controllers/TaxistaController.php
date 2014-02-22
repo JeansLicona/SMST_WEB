@@ -103,10 +103,10 @@ class TaxistaController extends Controller {
         $model->unsetAttributes();
         if (isset($_GET['Taxista']))
             $model->attributes = $_GET['Taxista'];
-
         $this->render('_search', array(
             'model' => $model,
         ));
+        
     }
 
     /**

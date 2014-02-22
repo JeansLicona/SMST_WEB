@@ -112,7 +112,7 @@ class Taxista extends CActiveRecord {
         $criteria->compare('telefono_taxista', $this->telefono_taxista, true);
         $criteria->compare('company_taxista', $this->company_taxista, true);
         $criteria->compare('numero_taxista', $this->numero_taxista, true);
-        $criteria->compare('activo', 2);
+        $criteria->compare('activo', 1);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
