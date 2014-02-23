@@ -29,5 +29,6 @@ $usuario=Usuario::model()->findByPk($model->id_taxista);
 		'telefono_taxista',
 		'company_taxista',
 		'numero_taxista',
+                'emal_taxista',
 	),
 )); ?>

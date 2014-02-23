@@ -10,6 +10,7 @@
  * @property string $telefono_taxista
  * @property string $company_taxista
  * @property string $numero_taxista
+ * @property string $email_taxista
  * @property integer $activo
  *
  * The followings are the available model relations:
@@ -33,13 +34,14 @@ class Taxista extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('fk_equipo, direccion_taxista, telefono_taxista, company_taxista, numero_taxista', 'required'),
+            array('fk_equipo, direccion_taxista, telefono_taxista, company_taxista, numero_taxista', 'email_taxista','required'),
             array('fk_equipo, activo', 'numerical', 'integerOnly' => true),
             array('direccion_taxista, company_taxista', 'length', 'max' => 100),
             array('telefono_taxista, numero_taxista', 'length', 'max' => 10),
+            array('email_taxista', 'length', 'max' => 35),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('id_taxista, fk_equipo, direccion_taxista, telefono_taxista, company_taxista, numero_taxista, activo', 'safe', 'on' => 'search'),
+            array('id_taxista, fk_equipo, direccion_taxista, telefono_taxista, company_taxista, numero_taxista, email_taxista, activo', 'safe', 'on' => 'search'),
         );
     }
 
@@ -67,6 +69,7 @@ class Taxista extends CActiveRecord {
             'telefono_taxista' => 'Telefono del Taxista',
             'company_taxista' => 'Compañia del Taxista',
             'numero_taxista' => 'Numero del Taxista',
+            'email_taxista' => 'Email',
             'activo' => '',
         );
     }
@@ -94,6 +97,7 @@ class Taxista extends CActiveRecord {
         $criteria->compare('telefono_taxista', $this->telefono_taxista, true);
         $criteria->compare('company_taxista', $this->company_taxista, true);
         $criteria->compare('numero_taxista', $this->numero_taxista, true);
+        $criteria->compare('email_taxista', $this->email_taxista, true);
         $criteria->compare('activo', $this->activo);
 
         return new CActiveDataProvider($this, array(
@@ -112,6 +116,7 @@ class Taxista extends CActiveRecord {
         $criteria->compare('telefono_taxista', $this->telefono_taxista, true);
         $criteria->compare('company_taxista', $this->company_taxista, true);
         $criteria->compare('numero_taxista', $this->numero_taxista, true);
+        $criteria->compare('email_taxista', $this->email_taxista, true);
         $criteria->compare('activo', 1);
 
         return new CActiveDataProvider($this, array(

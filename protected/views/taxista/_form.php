@@ -60,6 +60,12 @@
         <?php echo $form->textField($model, 'numero_taxista', array('size' => 10, 'maxlength' => 10)); ?>
         <?php echo $form->error($model, 'numero_taxista'); ?>
     </div>
+    
+     <div class="row">
+        <?php echo $form->labelEx($model, 'email_taxista'); ?>
+        <?php echo $form->textField($model, 'email_taxista', array('size' => 35, 'maxlength' => 35)); ?>
+        <?php echo $form->error($model, 'email_taxista'); ?>
+    </div>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'activo'); ?>

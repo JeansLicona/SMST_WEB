@@ -65,6 +65,11 @@
             <?php echo $form->textField($model, 'numero_taxista', array('size' => 10, 'maxlength' => 10)); ?>
         </div>
 
+        <div class="row">
+            <?php echo $form->label($model, 'email_taxista'); ?>
+            <?php echo $form->textField($model, 'email_taxista', array('size' => 35, 'maxlength' => 35)); ?>
+        </div>
+        
         <div class="row buttons">
             <?php echo CHtml::submitButton('Buscar'); ?>
         </div>
