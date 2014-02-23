@@ -19,6 +19,8 @@
  */
 class Taxista extends CActiveRecord {
 
+    public $fecha_inicio_reporte;
+    public $fecha_fin_reporte;
     /**
      * @return string the associated database table name
      */
