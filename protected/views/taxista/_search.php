@@ -89,6 +89,7 @@
             'telefono_taxista',
             'company_taxista',
             'numero_taxista',
+            'email_taxista',
             /*
               'activo',
              */

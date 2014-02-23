@@ -22,13 +22,12 @@ $usuario=Usuario::model()->findByPk($model->id_taxista);
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
-	'attributes'=>array(
-		
+	'attributes'=>array(		
 		'fkEquipo.modelo_equipo',
 		'direccion_taxista',
 		'telefono_taxista',
 		'company_taxista',
 		'numero_taxista',
-                'emal_taxista',
+                'email_taxista',
 	),
 )); ?>
