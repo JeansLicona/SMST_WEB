@@ -75,8 +75,7 @@ class ConfiguracionController extends Controller
 			{
 				$this->write_cron_job( $model->frecuencia_balance_taxista );
 				$this->exec_cron_command();
-				exit();
-				// $this->redirect(array('view','id'=>$model->id_conf));
+				$this->redirect(array('view','id'=>$model->id_conf));
 			}
 
 		}
