@@ -30,6 +30,10 @@
     <b><?php echo CHtml::encode($data->getAttributeLabel('numero_taxista')); ?>:</b>
     <?php echo CHtml::encode($data->numero_taxista); ?>
     <br />
+    
+     <b><?php echo CHtml::encode($data->getAttributeLabel('email_taxista')); ?>:</b>
+    <?php echo CHtml::encode($data->email_taxista); ?>
+    <br />
 
     <b><?php echo CHtml::encode($data->getAttributeLabel('Estado')); ?>:</b>
     <?php
