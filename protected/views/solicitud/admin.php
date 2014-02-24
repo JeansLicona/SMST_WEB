@@ -56,8 +56,6 @@ $this->breadcrumbs=array(
 	<?php $this->endWidget(); ?>
 </div>
 
-<?php echo CHtml::link( 'Exportar a PDF', array( 'solicitud/export' ), array( 'id' => 'export' ) ); ?>
-
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'solicitud-grid',
 	'dataProvider'=>$model->search(),
