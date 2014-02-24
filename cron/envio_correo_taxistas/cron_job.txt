@@ -1,0 +1,2 @@
+MAILTO=andreeVela@gmail.com
+* * */10 * * /usr/bin/php C:/Wamp/www/Aplicaciones/SMST_WEB/cron/envio_correo_taxistas/EnvioCorreo.php

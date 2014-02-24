@@ -72,7 +72,13 @@ class ConfiguracionController extends Controller
 		{
 			$model->attributes=$_POST['Configuracion'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_conf));
+			{
+				$this->write_cron_job( $model->frecuencia_balance_taxista );
+				$this->exec_cron_command();
+				exit();
+				// $this->redirect(array('view','id'=>$model->id_conf));
+			}
+
 		}
 
 		$this->render('update',array(
@@ -106,5 +112,21 @@ class ConfiguracionController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	private function write_cron_job($days = 20)
+	{
+		$jobPath = Yii::getPathOfAlias('webroot') . '/cron/envio_correo_taxistas/EnvioCorreo.php';
+		$command = "MAILTO=" .Yii::app()->params['adminEmail']. "\n* * */$days * * /usr/bin/php $jobPath";
+
+		$file = Yii::getPathOfAlias('webroot') . '/cron/envio_correo_taxistas/cron_job.txt';
+		file_put_contents($file, $command);
+	}
+
+	private function exec_cron_command()
+	{
+		$job = Yii::getPathOfAlias('webroot') . '/cron/envio_correo_taxistas/cron_job.txt';
+		exec( 'crontab -r' );
+		exec( "crontab $job");
 	}
 }

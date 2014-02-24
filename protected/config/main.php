@@ -97,7 +97,7 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'andreeVela@gmail.com',
 		'pdf_bin'=>'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe',
 	),
 );
