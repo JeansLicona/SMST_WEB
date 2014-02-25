@@ -96,11 +96,11 @@
             array(
                 'class' => 'CButtonColumn',
                 'class' => 'CButtonColumn',
-                'template'=>'{cuenta}{view}{update}{delete}', //Botón personalizado pára mostrar
+                'template'=>'{cuenta} {view}{update}{delete}', //Botón personalizado pára mostrar
                  'buttons'=>array(
                  	'cuenta' => array(
                  		//'label'=>'Estado de cuenta',
-                 		'imageUrl'=>Yii::app()->request->baseUrl.'/images/cuentaf.png',
+                 		'imageUrl'=>Yii::app()->request->baseUrl.'/images/cuentafac.png',
                  		//'url'=>'Yii::app()->createUrl("/taxista/reporte?id=$data->id" )',
                  		'url'=>'Yii::app()->createUrl("/taxista/reporte", array("id"=>$data->id_taxista))',
                  		'visible'=>'$data->activo',
