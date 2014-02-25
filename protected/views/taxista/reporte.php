@@ -1,4 +1,5 @@
 <?php
+    $taxista= Usuario::model()->findByPk($_GET['id']);
     $this->breadcrumbs = array(
         'Taxistas' => array('index'),
         'Reporte de estado de cuenta',
@@ -13,10 +14,10 @@
 
 <div class="form">
     <div class="row">
-        <h1>Reporte de estado de cuenta</h1>
+        <h1>Reporte estado de cuenta de: <?php echo $taxista->nombre_usuario; ?></h1>
         <label style="margin-left: 5px">Seleccionar el periodo de tiempo:</label>
         <?php
-            echo CHtml::beginForm(array('taxista/reporte'), 'post');
+            echo CHtml::beginForm(array('taxista/reporte&id='.$_GET['id']), 'post');
         ?>
         <label style="margin-left: -15px">Fecha de Inicio:</label>
         <?php
