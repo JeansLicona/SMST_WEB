@@ -33,10 +33,10 @@
     $this->widget('zii.widgets.grid.CGridView', array(
         'id' => 'taxista-grid',
         'dataProvider' => $model->search(),
-        'filter' => $model,
         'columns' => array(
-            'id_taxista',
-            'fk_equipo',
+            'idTaxista.nombre_usuario',
+            'idTaxista.apellido_usuario',
+            'fkEquipo.modelo_equipo',
             'direccion_taxista',
             'telefono_taxista',
             'company_taxista',
