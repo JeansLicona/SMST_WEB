@@ -48,7 +48,8 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="#"><?php echo Yii::app()->name ?></a>
+				<!--<a class="brand" href="#">--><!--?php echo Yii::app()->name ?></a>-->
+				
 				<div class="nav-collapse">
 					<?php $this->widget('zii.widgets.CMenu',array(
 						'htmlOptions' => array( 'class' => 'nav' ),
@@ -56,7 +57,7 @@
 						'items'=>array(
 							array('label'=>'Inicio', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 							array('label'=>'Acerca de', 'url'=>array('/site/page', 'view'=>'about')),
-							array('label'=>'Contáctenos', 'url'=>array('/site/contact')),
+							//array('label'=>'Contáctenos', 'url'=>array('/site/contact')),
 							array('label'=>'Cerrar sesión ('.$user.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 						),
 					)); ?>
@@ -133,17 +134,7 @@
 		</div> <!-- /container -->
 	</div>
 
-	<div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div id="footer-copyright" class="col-md-6">
-                        Acerca de | Contacto | Términos y condiciones
-                    </div> <!-- /span6 -->
-                    <div id="footer-terms" class="col-md-6">
-                       <!-- © 2012-13 Black Bootstrap. <a href="http://nachi.me.pn" target="_blank">Nachi</a>.-->
-                    </div> <!-- /.span6 -->
-                </div> <!-- /row -->
-            </div> <!-- /container -->
-        </div>
+	
+		
 </body>
 </html>
