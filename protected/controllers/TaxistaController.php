@@ -77,16 +77,19 @@
         }
 
         public function actionReporte() {
-            $model = new Taxista;
-            $reporteSolicitudes="";
+            $idTaxista = $_GET['id'];
+            $model = $this->loadModel($idTaxista);
+            $reporteSolicitudes = "";
             if (isset($_POST['Taxista'])) {
-                $modelTaxista = $_POST['Taxista'];
-                if (!empty($modelTaxista->fecha_inicio_reporte) && !empty($modelTaxista->fecha_fin_reporte)) {
-                    $reporteSolicitudes=$this->generarReporte($modelTaxista);
+                $fechas = $_POST['Taxista'];
+                $model->fecha_inicio_reporte = $fechas['fecha_inicio_reporte'];
+                $model->fecha_fin_reporte = $fechas['fecha_fin_reporte'];
+                if (!empty($model->fecha_inicio_reporte) && !empty($model->fecha_fin_reporte)) {
+                    $reporteSolicitudes = $this->generarReporte($model);
                 }
             }
             $this->render('reporte', array(
-                'model' => $model ,'reporte'=>$reporteSolicitudes));
+                'model' => $model, 'reporte' => $reporteSolicitudes));
         }
 
         /**
@@ -186,36 +189,40 @@
         private function generarReporte($modelTaxista) {
             $query = new CDbCriteria();
             $query->select = "*";
-            $query->condition = "hora_fecha_solicitud between '".$modelTaxista->fecha_inicio_reporte."' 
-                and '".$modelTaxista->fecha_fin_reporte."'  and fk_taxista = '". $modelTaxista->id_taxista."'
+            $query->condition = "hora_fecha_solicitud between '" . $modelTaxista->fecha_inicio_reporte . "' 
+                and '" . $modelTaxista->fecha_fin_reporte . "'  and fk_taxista = '" . $modelTaxista->id_taxista . "'
                      and estado_solicitud = 'aprobada'";
-            
-            $solicitudes=  Solicitud::model()->findAll($query);
-            $montoTotal=0;
-            $tablaSolicitudes = '';
-            $tablaSolicitudes.= '<table border="2" width="80%">';
-            $tablaSolicitudes.='<tr>';
-            $tablaSolicitudes.='<th>Latidud Solicitud</th>';
-            $tablaSolicitudes.='<th>Longitud Solicitud</th>';
-            $tablaSolicitudes.='<th>Hora y Fecha Solicitud</th>';
-            $tablaSolicitudes.='<th>Monto</th>';
-            $tablaSolicitudes.='</tr>';
-            foreach ($solicitudes as $solicitud) {
-                $tablaSolicitudes.='<tr align="center">';
-                $tablaSolicitudes.='<td>' . $solicitud->latitud_solicitud . '</td>';
-                $tablaSolicitudes.='<td>' . $solicitud->longitud_solicitud . '</td>';
-                $tablaSolicitudes.='<td>' . $solicitud->hora_fecha_solicitud . '</td>';
-                $tablaSolicitudes.='<td>' . $solicitud->costo_solcitud . '</td>';
+
+            $solicitudes = Solicitud::model()->findAll($query);
+            if (!empty($solicitudes)) {
+                $montoTotal = 0;
+                $tablaSolicitudes = '';
+                $tablaSolicitudes.= '<table border="2" width="80%">';
+                $tablaSolicitudes.='<tr>';
+                $tablaSolicitudes.='<th>Latitud Solicitud</th>';
+                $tablaSolicitudes.='<th>Longitud Solicitud</th>';
+                $tablaSolicitudes.='<th>Hora y Fecha Solicitud</th>';
+                $tablaSolicitudes.='<th>Monto</th>';
                 $tablaSolicitudes.='</tr>';
-                $montoTotal=$montoTotal+$solicitud->costo_solcitud;
-            }
-            $tablaSolicitudes.='<tr align="center">';
+                foreach ($solicitudes as $solicitud) {
+                    $tablaSolicitudes.='<tr align="center">';
+                    $tablaSolicitudes.='<td>' . $solicitud->latitud_solicitud . '</td>';
+                    $tablaSolicitudes.='<td>' . $solicitud->longitud_solicitud . '</td>';
+                    $tablaSolicitudes.='<td>' . $solicitud->hora_fecha_solicitud . '</td>';
+                    $tablaSolicitudes.='<td>' . $solicitud->costo_solcitud . '</td>';
+                    $tablaSolicitudes.='</tr>';
+                    $montoTotal = $montoTotal + $solicitud->costo_solcitud;
+                }
+                $tablaSolicitudes.='<tr align="center">';
                 $tablaSolicitudes.='<td></td>';
                 $tablaSolicitudes.='<td></td>';
                 $tablaSolicitudes.='<td>Monto Total</td>';
-                $tablaSolicitudes.='<td>' .$montoTotal. '</td>';
+                $tablaSolicitudes.='<td>' . $montoTotal . '</td>';
                 $tablaSolicitudes.='</tr>';
-            $tablaSolicitudes.= '</table>';
+                $tablaSolicitudes.= '</table>';
+            }else{
+                $tablaSolicitudes="<h2>No se encuentra reporte para el taxista</h2>";
+            }
             return $tablaSolicitudes;
         }
 

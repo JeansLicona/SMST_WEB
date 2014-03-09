@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 23-02-2014 a las 21:18:17
+-- Tiempo de generación: 24-02-2014 a las 22:20:38
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.3.13
 
@@ -134,6 +134,7 @@ CREATE TABLE IF NOT EXISTS `taxista` (
   `company_taxista` varchar(100) CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL,
   `numero_taxista` varchar(10) CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL,
   `activo` smallint(1) NOT NULL,
+  `email_taxista` varchar(75) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id_taxista`),
   UNIQUE KEY `fk_equipo` (`fk_equipo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -142,9 +143,9 @@ CREATE TABLE IF NOT EXISTS `taxista` (
 -- Volcado de datos para la tabla `taxista`
 --
 
-INSERT INTO `taxista` (`id_taxista`, `fk_equipo`, `direccion_taxista`, `telefono_taxista`, `company_taxista`, `numero_taxista`, `activo`) VALUES
-(4, 1, '21', '32', '2131', '213213', 1),
-(9, 2, '34324', '432423', 'jpo', 'pojpojp', 1);
+INSERT INTO `taxista` (`id_taxista`, `fk_equipo`, `direccion_taxista`, `telefono_taxista`, `company_taxista`, `numero_taxista`, `activo`, `email_taxista`) VALUES
+(4, 1, '21', '32', '2131', '213213', 1, 'licona.dorantes@gmail.com'),
+(9, 2, '34324', '432423', 'jpo', 'pojpojp', 1, 'halcon.negro@hotmail.com');
 
 -- --------------------------------------------------------
 
