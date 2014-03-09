@@ -26,11 +26,11 @@
         public function accessRules() {
             return array(
                 array('allow', // allow all users to perform 'index' and 'view' actions
-                    'actions' => array('view', 'create', 'update', 'admin', 'delete', 'index'),
+                    'actions' => array('view', 'create', 'update', 'admin', 'delete', 'index','search'),
                     'users' => array('administrador'),
                 ),
                 array('allow', // allow all users to perform 'index' and 'view' actions
-                    'actions' => array('create'),
+                    'actions' => array('create','search'),
                     'users' => array('operador'),
                 ),
 //			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -133,6 +133,16 @@
             $dataProvider = new CActiveDataProvider('Usuario');
             $this->render('index', array(
                 'dataProvider' => $dataProvider,
+            ));
+        }
+        
+        public function actionSearch() {
+            $model = new Usuario('search');
+            $model->unsetAttributes();
+            if (isset($_GET['Usuario']))
+                $model->attributes = $_GET['Usuario'];
+            $this->render('_search', array(
+                'model' => $model,
             ));
         }
 

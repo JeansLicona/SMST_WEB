@@ -8,7 +8,7 @@
     $this->menu = array(
         array('label' => 'Registrar Taxista', 'url' => array('usuario/create')),
         array('label' => 'Administrar Taxista', 'url' => array('usuario/admin')),
-        array('label' => 'Búsqueda Avanzada', 'url' => array('taxista/search')),
+        array('label' => 'Búsqueda Avanzada', 'url' => array('usuario/search')),
     );
 ?>
 

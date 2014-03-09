@@ -9,7 +9,7 @@
     $this->pageTitle = Yii::app()->name . ' - Administrar Taxista';
     $this->menu = array(
         array('label' => 'Registrar Taxista', 'url' => array('usuario/create')),
-        array('label' => 'Búsqueda Avanzada', 'url' => array('taxista/search')),
+        array('label' => 'Búsqueda Avanzada', 'url' => array('usuario/search')),
     );
 
     Yii::app()->clientScript->registerScript('search', "$('.search-button').click(function(){

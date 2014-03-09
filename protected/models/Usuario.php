@@ -105,6 +105,24 @@ class Usuario extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
+    
+    public function searchTaxista() {
+        // @todo Please modify the following code to remove attributes that should not be searched.
+
+        $criteria = new CDbCriteria;
+
+        $criteria->compare('id_usuario', $this->id_usuario);
+        $criteria->compare('nombre_usuario', $this->nombre_usuario, true);
+        $criteria->compare('apellido_usuario', $this->apellido_usuario, true);
+        $criteria->compare('username', $this->username, true);
+        $criteria->compare('password_hash', $this->password_hash, true);
+        $criteria->compare('tipo_usuario', "taxista");
+        $criteria->compare('activo', 1);
+
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
+    }
 
     /**
      * Returns the static model of the specified AR class.
