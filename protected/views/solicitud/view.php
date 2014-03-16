@@ -3,20 +3,52 @@
 /* @var $model Solicitud */
 
 $this->breadcrumbs=array(
-	'Solicituds'=>array('index'),
+	'Solicitud'=>array('index'),
 	$model->id_solicitud,
 );
 
-$this->menu=array(
-	array('label'=>'List Solicitud', 'url'=>array('index')),
-	array('label'=>'Create Solicitud', 'url'=>array('create')),
-	array('label'=>'Update Solicitud', 'url'=>array('update', 'id'=>$model->id_solicitud)),
-	array('label'=>'Delete Solicitud', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_solicitud),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Solicitud', 'url'=>array('admin')),
-);
+$this->pageTitle = Yii::app()->name . ' - Ver Solicitud';
+$this->menu = array(
+        array(
+        'label' => 'Taxista',
+        'url' => '#',
+        'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+        'itemOptions ' => array('class' => 'dropdown'),
+        'submenuOptions ' => array('class' => 'dropdown-menu'),
+        'items' => array(
+        array('label'=>'Registrar Taxista', 'url'=>array('usuario/create')),
+        array('label' => 'Editar Taxista', 'url' => array('update', 'id' => $model->id_taxista)),
+        array('label'=>'Eliminar Taxista', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_taxista),'confirm'=>'¿Está seguro que desea eliminar al taxista?')),
+	array('label'=>'Búsqueda Avanzada', 'url'=>array('usuario/search')),
+        array('label'=>'Administrar Taxistas', 'url'=>array('admin')),
+            )
+        ),
+        array(
+        'label' => 'Equipo',
+        'url' => '#',
+        'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+        'itemOptions ' => array('class' => 'dropdown'),
+        'submenuOptions ' => array('class' => 'dropdown-menu'),
+        'items' => array(
+        array('label'=>'Registrar Equipo', 'url'=>array('equipo/create')),
+	array('label'=>'Administrar Equipo', 'url'=>array('equipo/admin')),
+ 
+            )
+        ),
+        array(
+        'label' => 'Reporte',
+        'url' => '#',
+        'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+        'itemOptions ' => array('class' => 'dropdown'),
+        'submenuOptions ' => array('class' => 'dropdown-menu'),
+        'items' => array(
+        array('label'=>'Administrar Reporte', 'url'=>array('solicitud/admin')),
+            )
+        ),
+    );
 ?>
 
-<h1>View Solicitud #<?php echo $model->id_solicitud; ?></h1>
+<h1>Ver Solicitud #<?php echo $model->id_solicitud; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
