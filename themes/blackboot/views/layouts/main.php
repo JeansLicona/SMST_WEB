@@ -56,8 +56,6 @@
 						'activeCssClass'	=> 'active',
 						'items'=>array(
 							array('label'=>'Inicio', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-							array('label'=>'Equipos', 'url'=>array('/equipo/admin'), 'visible'=> !Yii::app()->user->isGuest),
-							array('label'=>'Reportes', 'url'=>array('/solicitud/admin'), 'visible'=> !Yii::app()->user->isGuest),
 							array('label'=>'Acerca de', 'url'=>array('/site/page', 'view'=>'about')),
 							//array('label'=>'Contáctenos', 'url'=>array('/site/contact')),
 							array('label'=>'Cerrar sesión ('.$user.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)

@@ -9,9 +9,41 @@
     );
     $this->pageTitle = Yii::app()->name . ' - Editar Taxista';
     $this->menu = array(
-        array('label' => 'Registrar Taxista', 'url' => array('usuario/create')), //cambiar a que dirija a create usuario
+        array(
+        'label' => 'Taxista',
+        'url' => '#',
+        'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+        'itemOptions ' => array('class' => 'dropdown'),
+        'submenuOptions ' => array('class' => 'dropdown-menu'),
+        'items' => array(
+        array('label'=>'Registrar Taxista', 'url'=>array('usuario/create')),
         array('label' => 'Ver Taxista', 'url' => array('view', 'id' => $model->id_taxista)),
-        array('label' => 'Administrar Taxistas', 'url' => array('admin')),
+	array('label'=>'Búsqueda Avanzada', 'url'=>array('usuario/search')),
+        array('label'=>'Administrar Taxistas', 'url'=>array('admin')),
+            )
+        ),
+        array(
+        'label' => 'Equipo',
+        'url' => '#',
+        'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+        'itemOptions ' => array('class' => 'dropdown'),
+        'submenuOptions ' => array('class' => 'dropdown-menu'),
+        'items' => array(
+        array('label'=>'Registrar Equipo', 'url'=>array('equipo/create')),
+	array('label'=>'Administrar Equipo', 'url'=>array('equipo/admin')),
+ 
+            )
+        ),
+        array(
+        'label' => 'Reporte',
+        'url' => '#',
+        'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+        'itemOptions ' => array('class' => 'dropdown'),
+        'submenuOptions ' => array('class' => 'dropdown-menu'),
+        'items' => array(
+        array('label'=>'Administrar Reporte', 'url'=>array('solicitud/admin')),
+            )
+        ),
     );
 ?>
 
