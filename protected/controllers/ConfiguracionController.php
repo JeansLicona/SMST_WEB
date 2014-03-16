@@ -28,21 +28,21 @@ class ConfiguracionController extends Controller
     public function accessRules()
     {
         return array(
-            array('allow',
-                'actions'=>array('index','view'),
-                'users'=>array('*'),
-            ),
-            array('allow',
-                'actions'=>array('create','update'),
-                'users'=>array('@'),
-            ),
-            array('allow',
-                'actions'=>array('admin','delete'),
-                'users'=>array('admin'),
-            ),
-            array('deny',  // deny all users
-                'users'=>array('*'),
-            ),
+            array('allow', // allow all users to perform 'index' and 'view' actions
+                    'actions' => array('view', 'update'),
+                    'users' => array('administrador', 'operador'),
+                ),
+//            array('allow',
+//                'actions'=>array('create','update'),
+//                'users'=>array('@'),
+//            ),
+//            array('allow',
+//                'actions'=>array('admin','delete'),
+//                'users'=>array('admin'),
+//            ),
+//            array('deny',  // deny all users
+//                'users'=>array('*'),
+//            ),
         );
     }
 
