@@ -40,6 +40,7 @@
                         'value'=>$model->fecha_compra,
                         'options'=>array(
                             'showAnim'=>'slide',//'slide','fold','slideDown','fadeIn','blind','bounce','clip','drop'
+                            'maxDate'=>"0",
                          ),
                         'htmlOptions'=>array(
                             'style'=>'height:20px;color:black;',
