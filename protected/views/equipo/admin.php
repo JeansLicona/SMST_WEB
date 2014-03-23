@@ -81,6 +81,7 @@ o <b>=</b>) al comienzo de cada uno de sus valores de búsqueda para especificar
 		'fecha_compra',
 		array(
 			'class'=>'CButtonColumn',
+                    'template' => '{view}{update}',
 		),
 	),
 )); ?>

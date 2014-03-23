@@ -75,6 +75,7 @@
              */
             array(
                 'class' => 'CButtonColumn',
+                'template' => '{view}{update}',
             ),
         ),
     ));
