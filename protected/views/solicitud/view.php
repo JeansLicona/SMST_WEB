@@ -19,7 +19,7 @@ $this->menu = array(
         array('label' => 'Editar Taxista', 'url' => array('update', 'id' => $model->id_taxista)),
         array('label'=>'Eliminar Taxista', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_taxista),'confirm'=>'¿Está seguro que desea eliminar al taxista?')),
 	array('label'=>'Búsqueda Avanzada', 'url'=>array('usuario/search')),
-        array('label'=>'Administrar Taxistas', 'url'=>array('admin')),
+        array('label'=>'Administrar Taxistas', 'url'=>array('taxista/admin')),
             )
         ),
         array(

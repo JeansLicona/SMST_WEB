@@ -16,7 +16,7 @@ $this->menu = array(
                     array('label' => 'Registrar Usuario', 'url' => array('usuario/create')),
                     array('label' => 'Administrar Usuario', 'url' => array('admin')),
                     array('label' => 'Búsqueda Avanzada Taxistas', 'url' => array('usuario/search')),
-                    array('label' => 'Administrar Taxistas', 'url' => array('admin')),
+                    array('label' => 'Administrar Taxistas', 'url' => array('taxista/admin')),
                 )
             ),
             array(
