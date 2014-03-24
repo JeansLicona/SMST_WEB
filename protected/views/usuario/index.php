@@ -9,7 +9,6 @@ $this->pageTitle=Yii::app()->name.' - Usuarios';
 $this->menu = array(
             array(
                 'label' => 'Usuario',
-                'url' => '#',
                 'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
                 'itemOptions ' => array('class' => 'dropdown'),
                 'submenuOptions ' => array('class' => 'dropdown-menu'),
@@ -17,12 +16,11 @@ $this->menu = array(
                     array('label' => 'Registrar Usuario', 'url' => array('usuario/create')),
                     array('label' => 'Administrar Usuario', 'url' => array('admin')),
                     array('label' => 'Búsqueda Avanzada Taxistas', 'url' => array('usuario/search')),
-                    array('label' => 'Administrar Taxistas', 'url' => array('admin')),
+                    array('label' => 'Administrar Taxistas', 'url' => array('taxista/admin')),
                 )
             ),
             array(
                 'label' => 'Equipo',
-                'url' => '#',
                 'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
                 'itemOptions ' => array('class' => 'dropdown'),
                 'submenuOptions ' => array('class' => 'dropdown-menu'),
@@ -33,7 +31,6 @@ $this->menu = array(
             ),
             array(
                 'label' => 'Reporte',
-                'url' => '#',
                 'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
                 'itemOptions ' => array('class' => 'dropdown'),
                 'submenuOptions ' => array('class' => 'dropdown-menu'),

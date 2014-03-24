@@ -9,30 +9,21 @@ $this->breadcrumbs=array(
 
 $this->pageTitle=Yii::app()->name.' - Ver Taxista';
 
-$this->menu=array(
-	array('label'=>'Registar Taxista', 'url'=>array('usuario/create')),
-	array('label'=>'Editar Taxista', 'url'=>array('update', 'id'=>$model->id_taxista)),
-	array('label'=>'Eliminar Taxista', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_taxista),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Administrar Taxistas', 'url'=>array('admin')),
-);
 $this->menu = array(
         array(
         'label' => 'Taxista',
-        'url' => '#',
         'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
         'itemOptions ' => array('class' => 'dropdown'),
         'submenuOptions ' => array('class' => 'dropdown-menu'),
         'items' => array(
         array('label'=>'Registrar Taxista', 'url'=>array('usuario/create')),
         array('label' => 'Editar Taxista', 'url' => array('update', 'id' => $model->id_taxista)),
-        array('label'=>'Eliminar Taxista', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_taxista),'confirm'=>'¿Está seguro que desea eliminar al taxista?')),
-	array('label'=>'Búsqueda Avanzada', 'url'=>array('usuario/search')),
+        array('label'=>'Búsqueda Avanzada Taxistas', 'url'=>array('usuario/search')),
         array('label'=>'Administrar Taxistas', 'url'=>array('admin')),
             )
         ),
         array(
         'label' => 'Equipo',
-        'url' => '#',
         'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
         'itemOptions ' => array('class' => 'dropdown'),
         'submenuOptions ' => array('class' => 'dropdown-menu'),
@@ -44,7 +35,6 @@ $this->menu = array(
         ),
         array(
         'label' => 'Reporte',
-        'url' => '#',
         'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
         'itemOptions ' => array('class' => 'dropdown'),
         'submenuOptions ' => array('class' => 'dropdown-menu'),

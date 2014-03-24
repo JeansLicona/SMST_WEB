@@ -11,7 +11,6 @@ $this->breadcrumbs=array(
 $this->menu = array(
         array(
         'label' => 'Taxista',
-        'url' => '#',
         'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
         'itemOptions ' => array('class' => 'dropdown'),
         'submenuOptions ' => array('class' => 'dropdown-menu'),
@@ -23,7 +22,6 @@ $this->menu = array(
         ),
         array(
         'label' => 'Equipo',
-        'url' => '#',
         'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
         'itemOptions ' => array('class' => 'dropdown'),
         'submenuOptions ' => array('class' => 'dropdown-menu'),
@@ -35,7 +33,6 @@ $this->menu = array(
         ),
         array(
         'label' => 'Reporte',
-        'url' => '#',
         'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
         'itemOptions ' => array('class' => 'dropdown'),
         'submenuOptions ' => array('class' => 'dropdown-menu'),

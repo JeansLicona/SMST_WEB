@@ -9,11 +9,74 @@
     );
     $this->pageTitle = Yii::app()->name . ' - Búsqueda de Taxista';
 
-    $this->menu = array(
-        array('label' => 'Registrar Taxista', 'url' => array('usuario/create')),
-        array('label' => 'Administrar Taxistas', 'url' => array('taxista/admin')),
-    );
-
+    if (Yii::app()->user->id == 'administrador') {
+        $this->menu = array(
+            array(
+                'label' => 'Usuario',
+                'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+                'itemOptions ' => array('class' => 'dropdown'),
+                'submenuOptions ' => array('class' => 'dropdown-menu'),
+                'items' => array(
+                    array('label' => 'Registrar Usuario', 'url' => array('usuario/create')),
+                    array('label' => 'Administrar Usuario', 'url' => array('admin')),
+                    array('label' => 'Búsqueda Avanzada Taxistas', 'url' => array('usuario/search')),
+                    array('label' => 'Administrar Taxistas', 'url' => array('taxista/admin')),
+                )
+            ),
+            array(
+                'label' => 'Equipo',
+                'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+                'itemOptions ' => array('class' => 'dropdown'),
+                'submenuOptions ' => array('class' => 'dropdown-menu'),
+                'items' => array(
+                    array('label' => 'Registrar Equipo', 'url' => array('equipo/create')),
+                    array('label' => 'Administrar Equipo', 'url' => array('equipo/admin')),
+                )
+            ),
+            array(
+                'label' => 'Reporte',
+                'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+                'itemOptions ' => array('class' => 'dropdown'),
+                'submenuOptions ' => array('class' => 'dropdown-menu'),
+                'items' => array(
+                    array('label' => 'Administrar Reporte', 'url' => array('solicitud/admin')),
+                )
+            ),
+        );
+    } else {
+        $this->menu = array(
+            array(
+                'label' => 'Taxista',
+                'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+                'itemOptions ' => array('class' => 'dropdown'),
+                'submenuOptions ' => array('class' => 'dropdown-menu'),
+                'items' => array(
+                    array('label' => 'Registrar Taxista', 'url' => array('usuario/create')),
+                    array('label' => 'Búsqueda Avanzada Taxista', 'url' => array('usuario/search')),
+                    array('label' => 'Administrar Taxistas', 'url' => array('taxista/admin')),
+                )
+            ),
+            array(
+                'label' => 'Equipo',
+                'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+                'itemOptions ' => array('class' => 'dropdown'),
+                'submenuOptions ' => array('class' => 'dropdown-menu'),
+                'items' => array(
+                    array('label' => 'Registrar Equipo', 'url' => array('equipo/create')),
+                    array('label' => 'Administrar Equipo', 'url' => array('equipo/admin')),
+                )
+            ),
+            array(
+                'label' => 'Reporte',
+                'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+                'itemOptions ' => array('class' => 'dropdown'),
+                'submenuOptions ' => array('class' => 'dropdown-menu'),
+                'items' => array(
+                    array('label' => 'Administrar Reporte', 'url' => array('solicitud/admin')),
+                )
+            ),
+        );
+    }
     Yii::app()->clientScript->registerScript('search', "$('.search-button').click(function(){
 	$('.search-form').toggle();
 	return false;});
@@ -28,41 +91,42 @@
 
 <div class="wide form">
 
-    <?php
-        $form = $this->beginWidget('CActiveForm', array(
-            'action' => Yii::app()->createUrl($this->route),
-            'method' => 'get',
-        ));
-    ?>
+<?php
+    $form = $this->beginWidget('CActiveForm', array(
+        'action' => Yii::app()->createUrl($this->route),
+        'method' => 'get',
+    ));
+?>
 
     <div class="row">
-        <?php echo $form->label($model, 'id_usuario'); ?>
+<?php echo $form->label($model, 'id_usuario'); ?>
         <?php echo $form->textField($model, 'id_usuario'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->label($model, 'nombre_usuario'); ?>
+<?php echo $form->label($model, 'nombre_usuario'); ?>
         <?php echo $form->textField($model, 'nombre_usuario', array('size' => 30, 'maxlength' => 30)); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->label($model, 'apellido_usuario'); ?>
+<?php echo $form->label($model, 'apellido_usuario'); ?>
         <?php echo $form->textField($model, 'apellido_usuario', array('size' => 50, 'maxlength' => 50)); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->label($model, 'username'); ?>
+<?php echo $form->label($model, 'username'); ?>
         <?php echo $form->textField($model, 'username', array('size' => 15, 'maxlength' => 15)); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->hiddenField($model, 'tipo_usuario', array('value' => "taxista")); ?>
+<?php echo $form->hiddenField($model, 'tipo_usuario', array('value' => "taxista")); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->label($model, 'activo'); ?>
+<?php echo $form->label($model, 'activo'); ?>
         <?php echo $form->dropDownList($model, 'activo', array('0' => 'Inactivo',
-                '1' => 'Activo',), array('empty' => 'Seleccione la Categoria'));?>
+                '1' => 'Activo',), array('empty' => 'Seleccione la Categoria'));
+        ?>
     </div>
 
     <div class="row buttons">
@@ -88,8 +152,7 @@
              */
             array(
                 'class' => 'CButtonColumn',
-                'class' => 'CButtonColumn',
-                'template' => '{cuenta} {view}{update}{delete}', //Botón personalizado pára mostrar
+                'template' => '{cuenta} {view}{update}', //Botón personalizado pára mostrar
                 'buttons' => array(
                     'cuenta' => array(
                         //'label'=>'Estado de cuenta',
