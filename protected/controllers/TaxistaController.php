@@ -191,7 +191,7 @@
             $query->select = "*";
             $query->condition = "hora_fecha_solicitud between '" . $modelTaxista->fecha_inicio_reporte . "' 
                 and '" . $modelTaxista->fecha_fin_reporte . "'  and fk_taxista = '" . $modelTaxista->id_taxista . "'
-                     and estado_solicitud = 'aprobada'";
+                     and estado_solicitud = 'aceptada'";
 
             $solicitudes = Solicitud::model()->findAll($query);
             if (!empty($solicitudes)) {
