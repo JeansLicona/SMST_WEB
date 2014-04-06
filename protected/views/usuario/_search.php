@@ -39,7 +39,7 @@
                 'itemOptions ' => array('class' => 'dropdown'),
                 'submenuOptions ' => array('class' => 'dropdown-menu'),
                 'items' => array(
-                    array('label' => 'Administrar Reporte', 'url' => array('solicitud/admin')),
+                    array('label' => ' Reporte Global Sistema', 'url' => array('solicitud/admin')),
                 )
             ),
         );
@@ -72,7 +72,7 @@
                 'itemOptions ' => array('class' => 'dropdown'),
                 'submenuOptions ' => array('class' => 'dropdown-menu'),
                 'items' => array(
-                    array('label' => 'Administrar Reporte', 'url' => array('solicitud/admin')),
+                    array('label' => ' Reporte Global Sistema', 'url' => array('solicitud/admin')),
                 )
             ),
         );
@@ -137,31 +137,64 @@
 
 </div><!-- search-form -->
 
+
+<h1>Taxistas Activos</h1>
 <?php
     $this->widget('zii.widgets.grid.CGridView', array(
         'id' => 'usuario-grid',
-        'dataProvider' => $model->searchTaxista(),
+        'dataProvider' => $model->searchTaxistaActivo(),
         'columns' => array(
             'id_usuario',
             'nombre_usuario',
             'apellido_usuario',
             'username',
             'tipo_usuario',
-            /*
-              'activo',
-             */
             array(
                 'class' => 'CButtonColumn',
-                'template' => '{cuenta} {view}{update}', //Botón personalizado pára mostrar
+                'template' => '{view}{update}{cuenta}{desactivar}', //Botón personalizado pára mostrar
+                'buttons' => array(
+                    'cuenta' => array(
+                        //'label'=>'Estado de cuenta',
+                        'imageUrl' => Yii::app()->request->baseUrl . '/images/cuentafac.png',
+                        'url' => 'Yii::app()->createUrl("/taxista/reporte", array("id"=>$data->id_usuario))',
+                        'visible' => '$data->activo',
+                        'click' => 'function(data)',
+                    ),
+                    'desactivar' => array(
+                        'imageUrl' => Yii::app()->request->baseUrl . '/images/desactivar.png',
+                        'url' => 'Yii::app()->createUrl("/taxista/suscripcion", array("id"=>$data->id_usuario))',
+                        'visible' => '$data->activo',
+                        'click' => 'function(data)',
+                    ),
+                ),
+            ),
+        ),
+    ));
+    ?>
+<h1>Taxistas Inactivos</h1>
+<?php
+    $this->widget('zii.widgets.grid.CGridView', array(
+        'id' => 'usuario-grid',
+        'dataProvider' => $model->searchTaxistaInactivo(),
+        'columns' => array(
+            'id_usuario',
+            'nombre_usuario',
+            'apellido_usuario',
+            'username',
+            'tipo_usuario',
+            array(
+                'class' => 'CButtonColumn',
+                'template' => ' {view}{update}{cuenta}{activar}', //Botón personalizado pára mostrar
                 'buttons' => array(
                     'cuenta' => array(
                         //'label'=>'Estado de cuenta',
                         'imageUrl' => Yii::app()->request->baseUrl . '/images/cuentafac.png',
                         //'url'=>'Yii::app()->createUrl("/taxista/reporte?id=$data->id" )',
                         'url' => 'Yii::app()->createUrl("/taxista/reporte", array("id"=>$data->id_usuario))',
-                        'visible' => '$data->activo',
-                        //'visible'=>'$data->actionReporte()',
-                        'click' => 'function(data)',
+                    ),
+                    'activar' => array(
+                        'imageUrl' => Yii::app()->request->baseUrl . '/images/activar.png',
+                        'url' => 'Yii::app()->createUrl("/taxista/suscripcion", array("id"=>$data->id_usuario))',
                     ),
                 ),
             ),

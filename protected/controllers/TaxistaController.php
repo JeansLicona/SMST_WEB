@@ -26,7 +26,7 @@
         public function accessRules() {
             return array(
                 array('allow', // allow all users to perform 'index' and 'view' actions
-                    'actions' => array('index', 'view', 'search', 'create', 'update', 'admin', 'delete', 'reporte'),
+                    'actions' => array('index', 'view', 'search', 'create', 'update', 'admin', 'delete', 'reporte','suscripcion'),
                     'users' => array('administrador', 'operador'),
                 ),
 //            array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -90,6 +90,24 @@
             }
             $this->render('reporte', array(
                 'model' => $model, 'reporte' => $reporteSolicitudes));
+        }
+        
+        public function actionSuscripcion(){
+            $idTaxista = $_GET['id'];
+            $model = $this->loadModel($idTaxista);
+            $usuario=  Usuario::model()->findByPk($idTaxista);
+            if($model->activo==1){
+                $model->activo=0;
+                $usuario->activo=0;
+                
+            }else{
+                $model->activo=1;
+                $usuario->activo=1;
+            }
+            if($model->save(false)){
+                $usuario->save(false);
+                $this->redirect(array('usuario/search'));
+            }
         }
 
         /**
@@ -191,7 +209,7 @@
             $query->select = "*";
             $query->condition = "hora_fecha_solicitud between '" . $modelTaxista->fecha_inicio_reporte . "' 
                 and '" . $modelTaxista->fecha_fin_reporte . "'  and fk_taxista = '" . $modelTaxista->id_taxista . "'
-                     and estado_solicitud = 'aceptada'";
+                     and estado_solicitud = '1'";
 
             $solicitudes = Solicitud::model()->findAll($query);
             if (!empty($solicitudes)) {
