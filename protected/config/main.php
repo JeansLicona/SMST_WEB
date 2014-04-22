@@ -41,19 +41,19 @@ return array(
 		),
 		// uncomment the following to enable URLs in path-format
 		
-		'urlManager'=>array(
-			'urlFormat'=>'path',
-			'rules'=>array(
-				array('api/loginTaxista', 'pattern'=>'api/login', 'verb'=>'POST'),
-				array('api/requestTaxi', 'pattern'=>'api/requestTaxi', 'verb'=>'POST'),
-				array('api/requestTaxiFromCompany', 'pattern'=>'api/requestTaxiFromCompany', 'verb'=>'POST'),
-				array('api/acceptTaxi', 'pattern'=>'api/acceptTaxi', 'verb'=>'POST'),
-				array('api/cancelTaxi', 'pattern'=>'api/cancelTaxi', 'verb'=>'POST'),
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>'
-			),
-		),
+//		'urlManager'=>array(
+//			'urlFormat'=>'path',
+//			'rules'=>array(
+//				array('api/loginTaxista', 'pattern'=>'api/login', 'verb'=>'POST'),
+//				array('api/requestTaxi', 'pattern'=>'api/requestTaxi', 'verb'=>'POST'),
+//				array('api/requestTaxiFromCompany', 'pattern'=>'api/requestTaxiFromCompany', 'verb'=>'POST'),
+//				array('api/acceptTaxi', 'pattern'=>'api/acceptTaxi', 'verb'=>'POST'),
+//				array('api/cancelTaxi', 'pattern'=>'api/cancelTaxi', 'verb'=>'POST'),
+//				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+//				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+//				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>'
+//			),
+//		),
 
 		// Uncomment to use as local
 		// 'db'=>array(
@@ -72,10 +72,10 @@ return array(
 			// 'charset' => 'utf8',
 
 			// Comment before local use
-			'connectionString' => 'mysql:host=localhost;dbname=cgc_odus',
+			'connectionString' => 'mysql:host=localhost;dbname=smst',
 			'emulatePrepare' => true,
-			'username' => 'cgc_odus',
-			'password' => '!@#odus',
+			'username' => 'root',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 
