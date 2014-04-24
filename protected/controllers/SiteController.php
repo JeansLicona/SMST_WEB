@@ -70,28 +70,37 @@
          */
         public function actionLogin() {
             $model = new LoginForm;
+            if (Yii::app()->user->isGuest) {
 
-            // if it is ajax validation request
-            if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
-                echo CActiveForm::validate($model);
-                Yii::app()->end();
-            }
 
-            // collect user input data
-            if (isset($_POST['LoginForm'])) {
-                $model->attributes = $_POST['LoginForm'];
-                // validate user input and redirect to the previous page if valid
-                if ($model->validate() && $model->login()) {
-                    //echo 'username:'.Yii::app()->user->user .'<br>tipo de usuario:'.Yii::app()->user->name;
-                    if(Yii::app()->user->name=='administrador'){
-                        $this->redirect('index.php?r=usuario/admin');
-                    }else if(Yii::app()->user->name=='operador'){
-                        $this->redirect('index.php?r=taxista/admin');
+                // if it is ajax validation request
+                if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
+                    echo CActiveForm::validate($model);
+                    Yii::app()->end();
+                }
+
+                // collect user input data
+                if (isset($_POST['LoginForm'])) {
+                    $model->attributes = $_POST['LoginForm'];
+                    // validate user input and redirect to the previous page if valid
+                    if ($model->validate() && $model->login()) {
+                        //echo 'username:'.Yii::app()->user->user .'<br>tipo de usuario:'.Yii::app()->user->name;
+                        if (Yii::app()->user->name == 'administrador') {
+                            $this->redirect('index.php?r=usuario/admin');
+                        } else if (Yii::app()->user->name == 'operador') {
+                            $this->redirect('index.php?r=taxista/admin');
+                        }
                     }
                 }
+                // display the login form
+                $this->render('login', array('model' => $model));
+            } else {
+                if (Yii::app()->user->name == 'administrador') {
+                    $this->redirect('index.php?r=usuario/admin');
+                } else if (Yii::app()->user->name == 'operador') {
+                    $this->redirect('index.php?r=taxista/admin');
+                }
             }
-            // display the login form
-            $this->render('login', array('model' => $model));
         }
 
         /**
