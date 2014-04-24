@@ -67,10 +67,10 @@ class Taxista extends CActiveRecord {
         return array(
             'id_taxista' => '',
             'fk_equipo' => 'Equipo',
-            'direccion_taxista' => 'Direccion Taxista',
-            'telefono_taxista' => 'Telefono del Taxista',
-            'company_taxista' => 'Compañia del Taxista',
-            'numero_taxista' => 'Numero del Taxista',
+            'direccion_taxista' => 'Dirección Taxista',
+            'telefono_taxista' => 'Teléfono del Taxista',
+            'company_taxista' => 'Compañía del Taxista',
+            'numero_taxista' => 'Número del Taxista',
             'email_taxista' => 'Email',
             'activo' => '',
         );
