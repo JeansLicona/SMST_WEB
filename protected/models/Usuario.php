@@ -152,4 +152,16 @@ class Usuario extends CActiveRecord {
         return parent::model($className);
     }
 
+
+    /*Esta función se ejecuta siempre antes de guardarse la imformación*/
+    protected function beforeSave()
+    {
+        if( parent::beforeSave() )
+        {   
+            $this->password_hash = crypt( $this->password_hash );//aqui se encripta la contraseña
+            return true;
+        }
+        return false;
+    }
+
 }

@@ -2,7 +2,7 @@
     /* @var $this TaxistaController */
     /* @var $model Taxista */
     /* @var $form CActiveForm */
-    $equiposBusqueda = Equipo::model()->findAll();
+    $equiposBusqueda = $model->getUnsetEquipos(); //Equipo::model()->findAll();
 ?>
 
 <div class="form">

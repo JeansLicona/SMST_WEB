@@ -41,7 +41,6 @@ class Taxista extends CActiveRecord {
             array('direccion_taxista, company_taxista', 'length', 'max' => 100),
             array('telefono_taxista, numero_taxista', 'length', 'max' => 10),
             array('email_taxista', 'length', 'max' => 35),
-            array('email_taxista', 'unique'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('id_taxista, fk_equipo, direccion_taxista, telefono_taxista, company_taxista, numero_taxista, email_taxista, activo', 'safe', 'on' => 'search'),
@@ -135,6 +134,27 @@ class Taxista extends CActiveRecord {
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);
+    }
+
+
+    /**
+    * Selecciona los campos id_equipo y modelo_equipo de todos los equipos 
+    * que no estén relacionados con algún taxista en las tablas
+    * equipo y taxista, tomando en cuenta para la selección los campos id_equipo y fk_equipo,
+    * de las tablas mencionadas anteriormente.
+    */
+    public function getUnsetEquipos()
+    {
+        /*Query que selecciona todos los equipos registrados en la tabla equipo de la base
+        de datos y que no están relacionados con algún elemento de la tabla taxista tomando
+        como referencia los campos id_equipo y fk_equipo respectivamente. Más especificamente
+        solo se selecciona la información de los siguientes campos de la tabla equipo: 
+        id_equipo y modelo_equipo.*/
+
+        $query = "SELECT id_equipo, modelo_equipo FROM equipo WHERE NOT EXISTS ( SELECT 1 FROM taxista 
+                    WHERE taxista.fk_equipo = equipo.id_equipo )";
+        //Se ejecuta el query y se toman todos los registros que cumplieron la norma
+        return Yii::app()->db->createCommand($query)->queryAll(); 
     }
 
 }

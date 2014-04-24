@@ -82,13 +82,10 @@
                 $model->attributes = $_POST['LoginForm'];
                 // validate user input and redirect to the previous page if valid
                 if ($model->validate() && $model->login()) {
-                    $user = Usuario::model()->find(array(
-                    'condition' => 'username=:usuario',
-                    'params' => array(':usuario' => $model->username),
-                    ));
-                    if($user->tipo_usuario=='administrador'){
+                    //echo 'username:'.Yii::app()->user->user .'<br>tipo de usuario:'.Yii::app()->user->name;
+                    if(Yii::app()->user->name=='administrador'){
                         $this->redirect('index.php?r=usuario/admin');
-                    }else if($user->tipo_usuario=='operador'){
+                    }else if(Yii::app()->user->name=='operador'){
                         $this->redirect('index.php?r=taxista/admin');
                     }
                 }
