@@ -45,10 +45,12 @@
         <?php echo $form->error($model, 'password_hash'); ?>
     </div>
 
+    <?php if($model->isNewRecord){ ?>
     <div class="row">
         <?php echo $form->labelEx($model, 'tipo_usuario'); ?>
         <?php
             if (Yii::app()->user->id == 'administrador') {
+                
                 echo $form->dropDownList($model, 'tipo_usuario', array('operador' => 'Operador', 'taxista' => 'Taxista')
                         , array('empty' => 'Seleccione la Categoria'));
             } else {
@@ -58,6 +60,7 @@
         ?>
         <?php echo $form->error($model, 'tipo_usuario'); ?>
     </div>
+    <?php } ?>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'activo'); ?>
