@@ -157,5 +157,5 @@ class Taxista extends CActiveRecord {
         //Se ejecuta el query y se toman todos los registros que cumplieron la norma
         return Yii::app()->db->createCommand($query)->queryAll(); 
     }
-
+    
 }

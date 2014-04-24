@@ -2,7 +2,14 @@
     /* @var $this TaxistaController */
     /* @var $model Taxista */
     /* @var $form CActiveForm */
-    $equiposBusqueda = $model->getUnsetEquipos(); //Equipo::model()->findAll();
+    if ($model->isNewRecord) {
+        $equiposBusqueda = $model->getUnsetEquipos(); //Equipo::model()->findAll();
+    } else {
+        $idEquipo = $model->fk_equipo;
+        $equiposBusqueda = $model->getUnsetEquipos();
+        $equipoAsignado= Equipo::model()->findByPk($idEquipo);
+        $equiposBusqueda[] = array("id_equipo"=>$equipoAsignado->id_equipo,"modelo_equipo"=>$equipoAsignado->modelo_equipo);   
+    }
 ?>
 
 <div class="form">
@@ -32,7 +39,8 @@
         <?php echo $form->labelEx($model, 'fk_equipo'); ?>
         <?php
             $equipos = CHtml::listData($equiposBusqueda, 'id_equipo', 'modelo_equipo');
-            echo $form->dropDownList($model, 'fk_equipo', $equipos, array('empty' => 'Seleccione Equipo'));
+                echo $form->dropDownList($model, 'fk_equipo', $equipos, array('empty' => 'Seleccione Equipo'));
+            
         ?>
         <?php echo $form->error($model, 'fk_equipo'); ?>
     </div>
@@ -60,8 +68,8 @@
         <?php echo $form->textField($model, 'numero_taxista', array('size' => 10, 'maxlength' => 10)); ?>
         <?php echo $form->error($model, 'numero_taxista'); ?>
     </div>
-    
-     <div class="row">
+
+    <div class="row">
         <?php echo $form->labelEx($model, 'email_taxista'); ?>
         <?php echo $form->textField($model, 'email_taxista', array('size' => 35, 'maxlength' => 35)); ?>
         <?php echo $form->error($model, 'email_taxista'); ?>
