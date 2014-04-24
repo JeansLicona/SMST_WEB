@@ -41,6 +41,7 @@ class Taxista extends CActiveRecord {
             array('direccion_taxista, company_taxista', 'length', 'max' => 100),
             array('telefono_taxista, numero_taxista', 'length', 'max' => 10),
             array('email_taxista', 'length', 'max' => 35),
+            array('email_taxista','email','message'=>"El correo electrónico incorrecto"),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('id_taxista, fk_equipo, direccion_taxista, telefono_taxista, company_taxista, numero_taxista, email_taxista, activo', 'safe', 'on' => 'search'),
