@@ -3,9 +3,9 @@
 /* @var $model LoginForm */
 /* @var $form CActiveForm  */
 
-$this->pageTitle=Yii::app()->name . ' - Iniciar sesion';
+$this->pageTitle=Yii::app()->name . ' - Iniciar sesión';
 $this->breadcrumbs=array(
-	'Iniciar sesion',
+	'Iniciar sesión',
 );
 ?>
 
@@ -17,7 +17,7 @@ $this->breadcrumbs=array(
 </div>
 <div class="pull-right login">
 <div class="pull-left">
-<h1>Iniciar sesion</h1>
+<h1>Iniciar sesión</h1>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
