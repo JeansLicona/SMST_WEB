@@ -52,7 +52,7 @@
             if (Yii::app()->user->id == 'administrador') {
                 
                 echo $form->dropDownList($model, 'tipo_usuario', array('operador' => 'Operador', 'taxista' => 'Taxista')
-                        , array('empty' => 'Seleccione la Categoria'));
+                        , array('empty' => 'Seleccione la Categoría'));
             } else {
                 echo $form->dropDownList($model, 'tipo_usuario'
                         , array('taxista' => 'Taxista'));
@@ -66,7 +66,7 @@
         <?php echo $form->labelEx($model, 'activo'); ?>
         <?php
             echo $form->dropDownList($model, 'activo', array('0' => 'Inactivo',
-                '1' => 'Activo',), array('empty' => 'Seleccione la Categoria'));
+                '1' => 'Activo',), array('empty' => 'Seleccione la Categoría'));
         ?>
         <?php echo $form->error($model, 'activo'); ?>
     </div>

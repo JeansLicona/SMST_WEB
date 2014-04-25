@@ -55,10 +55,10 @@ class Equipo extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'id_equipo' => 'Id Equipo',
-            'modelo_equipo' => 'Modelo Equipo',
-            'marca_equipo' => 'Marca Equipo',
-            'fecha_compra' => 'Fecha Compra',
-            'activo' => 'Activo',
+            'modelo_equipo' => 'Modelo del Equipo',
+            'marca_equipo' => 'Marca del Equipo',
+            'fecha_compra' => 'Fecha de Compra',
+            'activo' => 'Estado',
         );
     }
 
