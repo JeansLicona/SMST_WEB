@@ -86,9 +86,9 @@
                     if ($model->validate() && $model->login()) {
                         //echo 'username:'.Yii::app()->user->user .'<br>tipo de usuario:'.Yii::app()->user->name;
                         if (Yii::app()->user->name == 'administrador') {
-                            $this->redirect('index.php?r=usuario/admin');
+                            $this->redirect('index.php/usuario/admin');
                         } else if (Yii::app()->user->name == 'operador') {
-                            $this->redirect('index.php?r=taxista/admin');
+                            $this->redirect('index.php/taxista/admin');
                         }
                     }
                 }
@@ -96,9 +96,9 @@
                 $this->render('login', array('model' => $model));
             } else {
                 if (Yii::app()->user->name == 'administrador') {
-                    $this->redirect('index.php?r=usuario/admin');
+                    $this->redirect('http://localhost/SMST_WEB/index.php/usuario/admin');
                 } else if (Yii::app()->user->name == 'operador') {
-                    $this->redirect('index.php?r=taxista/admin');
+                    $this->redirect('http://localhost/SMST_WEB/index.php/taxista/admin');
                 }
             }
         }
