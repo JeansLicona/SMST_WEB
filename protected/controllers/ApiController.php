@@ -20,14 +20,66 @@ class ApiController extends Controller
 		}
 	}
 
+	public function actionLocation()
+	{
+		if(isset($_POST['id_taxista']) && isset($_POST['latitude']) 
+			&& isset($_POST['longitude'])) {
+			$id = $_POST['id_taxista'];
+			$latitude = $_POST['latitude'];
+			$longitude = $_POST['longitude'];
+			$location = array(
+				'id_taxista' => $id,
+				'latitud' => $latitude,
+				'longitud' => $longitude,
+				);
+
+			$this->_sendResponse(200, CJSON::encode(array('code' => 1)));
+		} else {
+			$this->_sendResponse(400, CJSON::encode(array('code' => 0)));
+		}
+	}
+
+	public function actionReject()
+	{
+		if( isset($_POST['id_collection']) ) {
+			$id_collection = $_POST['id_collection'];
+
+			if($id_collection == null) {
+				$this->_sendResponse(200, CJSON::encode(array('message' => 
+					'No hay taxis disponibles.')));
+			} else {
+				$slicedItem = array_shift($id_collection);
+				$this->_sendResponse(200, CJSON::encode(array($id_collection)));
+			}
+		} else {
+			$this->_sendResponse(400, CJSON::encode(array('code' => 0)));
+		}
+		// if( isset($_POST['id_collection']) ) {
+		// 	$this->_sendResponse(200, CJSON::encode(array('code' => 1)));
+		// } else {
+		// 	$this->_sendResponse(400, CJSON::encode(array('code' => 0)));
+		// }		
+	}
+
 	public function actionFinishRequest()
 	{
-		$this->render('finishReques');
+		$this->render('finishRequest');
+	}
+
+	public function actionRegistrationIdStore() 
+	{
+		if(isset($_POST['registration_id']) && isset($_POST['userType'])) {
+			$registration_id = $_POST['registration_id'];
+			$userType = $_POST['userType'];
+			$idStore = new IdStore($registration_id, $userType);
+			$idStore->store();
+		}
 	}
 
 	public function actionRequestTaxiFromCompany() 
 	{
-		if(isset($_POST['latitude']) && isset($_POST['longitude']) && isset($_POST['company_id'])) {
+		if(isset($_POST['latitude']) && isset($_POST['longitude']) 
+			&& isset($_POST['company_id'])) {
 			// función de espera(andree)
 			$token = $this->generateRandomString();
 			$this->_sendResponse(200, CJSON::encode(array(
@@ -76,7 +128,8 @@ class ApiController extends Controller
 
 	private function generateRandomString($length = 30) 
 	{
-	    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	    $characters = 
+	    	'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	    $randomString = '';
 	    for ($i = 0; $i < $length; $i++) {
 	        $randomString .= $characters[rand(0, strlen($characters) - 1)];
@@ -98,10 +151,12 @@ class ApiController extends Controller
 		}
 	}
 
-	private function _sendResponse($status = 200, $body = '', $content_type = 'text/html')
+	private function _sendResponse($status = 200, $body = '', $content_type = 
+		'text/html')
 	{
 	    // set the status
-	    $status_header = 'HTTP/1.1 ' . $status . ' ' . $this->_getStatusCodeMessage($status);
+	    $status_header = 
+	    	'HTTP/1.1 ' . $status . ' ' . $this->_getStatusCodeMessage($status);
 	    header($status_header);
 	    // and the content type
 	    header('Content-type: ' . $content_type);
@@ -127,10 +182,12 @@ class ApiController extends Controller
 	                $message = 'You must be authorized to view this page.';
 	                break;
 	            case 404:
-	                $message = 'The requested URL ' . $_SERVER['REQUEST_URI'] . ' was not found.';
+	                $message = 'The requested URL ' . $_SERVER['REQUEST_URI'] 
+	                	. ' was not found.';
 	                break;
 	            case 500:
-	                $message = 'The server encountered an error processing your request.';
+	                $message = 
+	                 'The server encountered an error processing your request.';
 	                break;
 	            case 501:
 	                $message = 'The requested method is not implemented.';
@@ -139,7 +196,10 @@ class ApiController extends Controller
 	 
 	        // servers don't always have a signature turned on 
 	        // (this is an apache directive "ServerSignature On")
-	        $signature = ($_SERVER['SERVER_SIGNATURE'] == '') ? $_SERVER['SERVER_SOFTWARE'] . ' Server at ' . $_SERVER['SERVER_NAME'] . ' Port ' . $_SERVER['SERVER_PORT'] : $_SERVER['SERVER_SIGNATURE'];
+	        $signature = ($_SERVER['SERVER_SIGNATURE'] == '') 
+	        	? $_SERVER['SERVER_SOFTWARE'] . ' Server at ' 
+	        	. $_SERVER['SERVER_NAME'] . ' Port ' 
+	        	. $_SERVER['SERVER_PORT'] : $_SERVER['SERVER_SIGNATURE'];
 	 
 	        // this should be templated in a real-world solution
 	        $body = '

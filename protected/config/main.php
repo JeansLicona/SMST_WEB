@@ -41,19 +41,22 @@ return array(
 		),
 		// uncomment the following to enable URLs in path-format
 		
-//		'urlManager'=>array(
-//			'urlFormat'=>'path',
-//			'rules'=>array(
-//				array('api/loginTaxista', 'pattern'=>'api/login', 'verb'=>'POST'),
-//				array('api/requestTaxi', 'pattern'=>'api/requestTaxi', 'verb'=>'POST'),
-//				array('api/requestTaxiFromCompany', 'pattern'=>'api/requestTaxiFromCompany', 'verb'=>'POST'),
-//				array('api/acceptTaxi', 'pattern'=>'api/acceptTaxi', 'verb'=>'POST'),
-//				array('api/cancelTaxi', 'pattern'=>'api/cancelTaxi', 'verb'=>'POST'),
-//				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-//				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-//				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>'
-//			),
-//		),
+		'urlManager'=>array(
+			'urlFormat'=>'path',
+			'rules'=>array(
+				array('api/loginTaxista', 'pattern'=>'api/login', 'verb'=>'POST'),
+				array('api/requestTaxi', 'pattern'=>'api/requestTaxi', 'verb'=>'POST'),
+				array('api/requestTaxiFromCompany', 'pattern'=>'api/requestTaxiFromCompany', 'verb'=>'POST'),
+				array('api/acceptTaxi', 'pattern'=>'api/acceptTaxi', 'verb'=>'POST'),
+				array('api/cancelTaxi', 'pattern'=>'api/cancelTaxi', 'verb'=>'POST'),
+				array('api/location', 'pattern'=>'api/location', 'verb'=>'POST'),
+				array('api/reject', 'pattern'=>'api/reject', 'verb'=>'POST'),
+				array('api/registrationIdStore', 'pattern'=>'api/registrationIdStore', 'verb'=>'POST'),
+				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>'
+			),
+		),
 
 		// Uncomment to use as local
 		// 'db'=>array(
