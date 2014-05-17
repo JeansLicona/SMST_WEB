@@ -180,7 +180,6 @@ class ApiController extends Controller
 		), );
 		Yii::log( 'options: ' . CJSON::encode($options), CLogger::LEVEL_INFO );
 
-
 		$context  = stream_context_create($options);
 		$result = file_get_contents($url, false, $context);
 		Yii::log( "respuesta: $result", CLogger::LEVEL_INFO );
