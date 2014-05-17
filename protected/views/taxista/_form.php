@@ -7,8 +7,10 @@
     } else {
         $idEquipo = $model->fk_equipo;
         $equiposBusqueda = $model->getUnsetEquipos();
-        $equipoAsignado= Equipo::model()->findByPk($idEquipo);
-        $equiposBusqueda[] = array("id_equipo"=>$equipoAsignado->id_equipo,"modelo_equipo"=>$equipoAsignado->modelo_equipo);   
+        $equipoAsignado = Equipo::model()->findByPk($idEquipo);
+        if ($equipoAsignado != null) {
+            $equiposBusqueda[] = array("id_equipo" => $equipoAsignado->id_equipo, "modelo_equipo" => $equipoAsignado->modelo_equipo);
+        }
     }
 ?>
 
@@ -39,52 +41,51 @@
         <?php echo $form->labelEx($model, 'fk_equipo'); ?>
         <?php
             $equipos = CHtml::listData($equiposBusqueda, 'id_equipo', 'modelo_equipo');
-                echo $form->dropDownList($model, 'fk_equipo', $equipos, array('empty' => 'Seleccione Equipo'));
-            
+            echo $form->dropDownList($model, 'fk_equipo', $equipos, array('empty' => 'Seleccione Equipo'));
         ?>
         <?php echo $form->error($model, 'fk_equipo'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'direccion_taxista'); ?>
+<?php echo $form->labelEx($model, 'direccion_taxista'); ?>
         <?php echo $form->textField($model, 'direccion_taxista', array('size' => 60, 'maxlength' => 100)); ?>
         <?php echo $form->error($model, 'direccion_taxista'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'telefono_taxista'); ?>
+<?php echo $form->labelEx($model, 'telefono_taxista'); ?>
         <?php echo $form->textField($model, 'telefono_taxista', array('size' => 10, 'maxlength' => 10)); ?>
         <?php echo $form->error($model, 'telefono_taxista'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'company_taxista'); ?>
+<?php echo $form->labelEx($model, 'company_taxista'); ?>
         <?php echo $form->textField($model, 'company_taxista', array('size' => 60, 'maxlength' => 100)); ?>
         <?php echo $form->error($model, 'company_taxista'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'numero_taxista'); ?>
+<?php echo $form->labelEx($model, 'numero_taxista'); ?>
         <?php echo $form->textField($model, 'numero_taxista', array('size' => 10, 'maxlength' => 10)); ?>
         <?php echo $form->error($model, 'numero_taxista'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'email_taxista'); ?>
+<?php echo $form->labelEx($model, 'email_taxista'); ?>
         <?php echo $form->textField($model, 'email_taxista', array('size' => 35, 'maxlength' => 35)); ?>
         <?php echo $form->error($model, 'email_taxista'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'activo'); ?>
+<?php echo $form->labelEx($model, 'activo'); ?>
         <?php echo $form->hiddenField($model, 'activo', array('value' => $model->activo)); ?>
         <?php echo $form->error($model, 'activo'); ?>
     </div>
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Editar'); ?>
+<?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Editar'); ?>
     </div>
 
-    <?php $this->endWidget(); ?>
+<?php $this->endWidget(); ?>
 
 </div><!-- form -->

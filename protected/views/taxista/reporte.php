@@ -45,7 +45,7 @@
         <h1>Reporte estado de cuenta de: <?php echo $taxista->nombre_usuario; ?></h1>
         <label style="margin-left: 5px">Seleccionar el periodo de tiempo:</label>
         <?php
-            echo CHtml::beginForm(array('taxista/reporte&id='.$_GET['id']), 'post');
+            echo CHtml::beginForm(array('taxista/reporte?id='.$_GET['id']), 'post');
         ?>
         <label style="margin-left: -15px">Fecha de Inicio:</label>
         <?php

@@ -27,12 +27,12 @@
             return array(
                 array('allow', // allow all users to perform 'index' and 'view' actions
                     'actions' => array('view', 'create', 'update', 'admin', 'delete', 'index','search'),
-                    'users' => array('administrador'),
+                    'users' => array('administrador','operador'),
                 ),
-                array('allow', // allow all users to perform 'index' and 'view' actions
-                    'actions' => array('create','search'),
-                    'users' => array('operador'),
-                ),
+//                array('allow', // allow all users to perform 'index' and 'view' actions
+//                    'actions' => array('create','search'),
+//                    'users' => array('operador'),
+//                ),
 //			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 //				'actions'=>array('create','update'),
 //				'users'=>array('@'),
@@ -91,6 +91,7 @@
          */
         public function actionUpdate($id) {
             $model = $this->loadModel($id);
+            $model['password_hash'] = "";
 
             // Uncomment the following line if AJAX validation is needed
             // $this->performAjaxValidation($model);
