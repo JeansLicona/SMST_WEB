@@ -71,8 +71,12 @@ class ApiController extends Controller
 		if(isset($_POST['registration_id']) && isset($_POST['userType'])) {
 			$registration_id = $_POST['registration_id'];
 			$userType = $_POST['userType'];
-			$idStore = new IdStore($registration_id, $userType);
-			$idStore->store();
+			// $idStore = new IdStore($registration_id, $userType);
+			// $idStore->store();
+
+			$this->_sendResponse(200, CJSON::encode(array('code' => 1)));
+		} else {
+			$this->_sendResponse(400, CJSON::encode(array('code' => 0)));
 		}
 	}
 
