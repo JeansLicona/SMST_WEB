@@ -148,8 +148,8 @@ class ApiController extends Controller
 			));
 
 			$companias;
-			foreach ($taxistas as $taxista) {
-				$companias[] = $taxista->company_taxista;
+			foreach ($taxistas as $key => $taxista) {
+				$companias[] = array( 'company_name'=>$taxista->company_taxista, 'company_id'=>$key );
 			}
 
 			$this->_sendResponse(200, CJSON::encode($companias));
