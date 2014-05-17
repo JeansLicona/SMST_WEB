@@ -55,7 +55,7 @@
 						'htmlOptions' => array( 'class' => 'nav' ),
 						'activeCssClass'	=> 'active',
 						'items'=>array(
-							array('label'=>'Inicio', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+							array('label'=>'Inicio', 'url'=>array('/site/login')),
 							array('label'=>'Acerca de', 'url'=>array('/site/page', 'view'=>'about')),
 							//array('label'=>'Contáctenos', 'url'=>array('/site/contact')),
 							array('label'=>'Cerrar sesión ('.$user.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)

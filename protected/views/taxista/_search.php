@@ -38,7 +38,7 @@
         'itemOptions ' => array('class' => 'dropdown'),
         'submenuOptions ' => array('class' => 'dropdown-menu'),
         'items' => array(
-        array('label'=>'Administrar Reporte', 'url'=>array('solicitud/admin')),
+        array('label'=>' Reporte Global Sistema', 'url'=>array('solicitud/admin')),
             )
         ),
     );
@@ -119,9 +119,7 @@
             'company_taxista',
             'numero_taxista',
             'email_taxista',
-            /*
               'activo',
-             */
             array(
                 'class' => 'CButtonColumn',
                 'class' => 'CButtonColumn',

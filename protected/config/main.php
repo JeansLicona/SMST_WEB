@@ -40,25 +40,41 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 		// uncomment the following to enable URLs in path-format
-		/*
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
+				array('api/loginTaxista', 'pattern'=>'api/login', 'verb'=>'POST'),
+				array('api/requestTaxi', 'pattern'=>'api/requestTaxi', 'verb'=>'POST'),
+				array('api/requestTaxiFromCompany', 'pattern'=>'api/requestTaxiFromCompany', 'verb'=>'POST'),
+				array('api/acceptTaxi', 'pattern'=>'api/acceptTaxi', 'verb'=>'POST'),
+				array('api/cancelTaxi', 'pattern'=>'api/cancelTaxi', 'verb'=>'POST'),
+				array('api/location', 'pattern'=>'api/location', 'verb'=>'POST'),
+				array('api/reject', 'pattern'=>'api/reject', 'verb'=>'POST'),
+				array('api/registrationIdStore', 'pattern'=>'api/registrationIdStore', 'verb'=>'POST'),
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>'
 			),
 		),
-		*/
-            /*
-		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-		),
+
+		// Uncomment to use as local
+		// 'db'=>array(
+		// 	'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
+		// ),
 		// uncomment the following to use a MySQL database
-             *
-             */
+             // *
+             // */
 
 		'db'=>array(
+			// Uncomment to use as local
+			// 'connectionString' => 'mysql:host=localhost;dbname=smst',
+			// 'emulatePrepare' => true,
+			// 'username' => 'root',
+			// 'password' => '',
+			// 'charset' => 'utf8',
+
+			// Comment before local use
 			'connectionString' => 'mysql:host=localhost;dbname=smst',
 			'emulatePrepare' => true,
 			'username' => 'root',

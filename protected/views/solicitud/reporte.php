@@ -1,4 +1,4 @@
-<h1>Reporte Global del Sistema</h1>
+<h1> Reporte Global del Sistema</h1>
 <table>
 	<tr>
 		<th>id</th>

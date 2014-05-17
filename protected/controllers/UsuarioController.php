@@ -27,12 +27,12 @@
             return array(
                 array('allow', // allow all users to perform 'index' and 'view' actions
                     'actions' => array('view', 'create', 'update', 'admin', 'delete', 'index','search'),
-                    'users' => array('administrador'),
+                    'users' => array('administrador','operador'),
                 ),
-                array('allow', // allow all users to perform 'index' and 'view' actions
-                    'actions' => array('create','search'),
-                    'users' => array('operador'),
-                ),
+//                array('allow', // allow all users to perform 'index' and 'view' actions
+//                    'actions' => array('create','search'),
+//                    'users' => array('operador'),
+//                ),
 //			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 //				'actions'=>array('create','update'),
 //				'users'=>array('@'),
@@ -69,10 +69,10 @@
 
             if (isset($_POST['Usuario'])) {
                 $model->attributes = $_POST['Usuario'];
-                $model->password_hash = crypt($model->password_hash);
+                
                 if ($model->save()) {
                     if ($model->tipo_usuario == 'taxista') {
-                        $this->redirect(array('taxista/create&id=' . $model->id_usuario . '&activo=' . $model->activo));
+                        $this->redirect(array('taxista/create?id=' . $model->id_usuario . '&activo=' . $model->activo));
                     } else {
                         $this->redirect(array('view', 'id' => $model->id_usuario));
                     }
@@ -91,6 +91,7 @@
          */
         public function actionUpdate($id) {
             $model = $this->loadModel($id);
+            $model['password_hash'] = "";
 
             // Uncomment the following line if AJAX validation is needed
             // $this->performAjaxValidation($model);

@@ -15,7 +15,7 @@ $this->menu = array(
         'submenuOptions ' => array('class' => 'dropdown-menu'),
         'items' => array(
         array('label'=>'Registrar Taxista', 'url'=>array('usuario/create')),
-        array('label'=>'Búsqueda Avanzada', 'url'=>array('usuario/search')),
+        array('label'=>'Búsqueda Avanzada Taxista', 'url'=>array('usuario/search')),
         array('label'=>'Administrar Taxistas', 'url'=>array('taxista/admin')),
             )
         ),
@@ -36,12 +36,12 @@ $this->menu = array(
         'itemOptions ' => array('class' => 'dropdown'),
         'submenuOptions ' => array('class' => 'dropdown-menu'),
         'items' => array(
-        array('label'=>'Administrar Reporte', 'url'=>array('solicitud/admin')),
+        array('label'=>' Reporte Global Sistema', 'url'=>array('solicitud/admin')),
             )
         ),
     );
 ?>
-<h1>Reporte Global del Sistema</h1>
+<h1> Reporte Global del Sistema</h1>
 
 <div class="wide form">
 	<?php $form=$this->beginWidget('CActiveForm', array(
@@ -94,7 +94,6 @@ $this->menu = array(
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'solicitud-grid',
 	'dataProvider'=>$model->search(),
-	'filter'=>$model,
 	'columns'=>array(
 		'id_solicitud',
 		array(

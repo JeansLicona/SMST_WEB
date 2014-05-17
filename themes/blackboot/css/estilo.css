@@ -2,10 +2,62 @@
 	padding-right: 50px;
 }
 
-#login{
-	min-width: 600px;
+.login{
+	min-width: 610px;
+}
+
+.login-form
+{
+    max-width: 400px;
 }
 
 #imagen{
 	padding: 50px;
+}
+
+select ,
+input[type="text"] ,
+input[type="password"]
+{
+    width: 50%;
+    height: 40px;
+
+    -moz-box-sizing: border-box; /*en Firefox*/
+    -webkit-box-sizing: border-box; /*en Chrome y Safari*/
+    box-sizing: border-box; /*en IE 8 y Opera*/
+
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    border:1px solid #dedede;
+
+    padding: 5px;
+    margin: 5px;
+
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Georgia", serif;
+    text-align: center; 
+
+    color: #3a3a3a;
+}
+
+input[type="text"]:focus ,
+input[type="password"]:focus
+{
+    border:1px solid #DD4814;
+    background: #FFD249;
+}
+
+label
+{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Georgia", serif;
+    text-align: center;
+
+    padding: 5px;
+    margin: 5px;
+
+    width: 40%;
 }

@@ -106,7 +106,7 @@ class Usuario extends CActiveRecord {
         ));
     }
     
-    public function searchTaxista() {
+    public function searchTaxistaActivo() {
         // @todo Please modify the following code to remove attributes that should not be searched.
 
         $criteria = new CDbCriteria;
@@ -123,6 +123,24 @@ class Usuario extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
+    
+    public function searchTaxistaInactivo() {
+        // @todo Please modify the following code to remove attributes that should not be searched.
+
+        $criteria = new CDbCriteria;
+
+        $criteria->compare('id_usuario', $this->id_usuario);
+        $criteria->compare('nombre_usuario', $this->nombre_usuario, true);
+        $criteria->compare('apellido_usuario', $this->apellido_usuario, true);
+        $criteria->compare('username', $this->username, true);
+        $criteria->compare('password_hash', $this->password_hash, true);
+        $criteria->compare('tipo_usuario', "taxista");
+        $criteria->compare('activo', 0);
+
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
+    }
 
     /**
      * Returns the static model of the specified AR class.
@@ -132,6 +150,18 @@ class Usuario extends CActiveRecord {
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);
+    }
+
+
+    /*Esta función se ejecuta siempre antes de guardarse la imformación*/
+    protected function beforeSave()
+    {
+        if( parent::beforeSave() )
+        {   
+            $this->password_hash = crypt( $this->password_hash );//aqui se encripta la contraseña
+            return true;
+        }
+        return false;
     }
 
 }

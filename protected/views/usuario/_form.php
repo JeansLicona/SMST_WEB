@@ -45,12 +45,14 @@
         <?php echo $form->error($model, 'password_hash'); ?>
     </div>
 
+    <?php if($model->isNewRecord){ ?>
     <div class="row">
         <?php echo $form->labelEx($model, 'tipo_usuario'); ?>
         <?php
             if (Yii::app()->user->id == 'administrador') {
+                
                 echo $form->dropDownList($model, 'tipo_usuario', array('operador' => 'Operador', 'taxista' => 'Taxista')
-                        , array('empty' => 'Seleccione la Categoria'));
+                        , array('empty' => 'Seleccione la Categoría'));
             } else {
                 echo $form->dropDownList($model, 'tipo_usuario'
                         , array('taxista' => 'Taxista'));
@@ -58,12 +60,13 @@
         ?>
         <?php echo $form->error($model, 'tipo_usuario'); ?>
     </div>
+    <?php } ?>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'activo'); ?>
         <?php
             echo $form->dropDownList($model, 'activo', array('0' => 'Inactivo',
-                '1' => 'Activo',), array('empty' => 'Seleccione la Categoria'));
+                '1' => 'Activo',), array('empty' => 'Seleccione la Categoría'));
         ?>
         <?php echo $form->error($model, 'activo'); ?>
     </div>
