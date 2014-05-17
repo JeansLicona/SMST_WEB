@@ -22,7 +22,7 @@ class ApiController extends Controller
 
 	public function actionLocation()
 	{
-		if(isset($_POST['id_taxista']) && isset($_POST['latitude']) 
+		if(isset($_POST['id_taxista']) && isset($_POST['latitude'])
 			&& isset($_POST['longitude'])) {
 			$id = $_POST['id_taxista'];
 			$latitude = $_POST['latitude'];
@@ -45,7 +45,7 @@ class ApiController extends Controller
 			$id_collection = $_POST['id_collection'];
 
 			if($id_collection == null) {
-				$this->_sendResponse(200, CJSON::encode(array('message' => 
+				$this->_sendResponse(200, CJSON::encode(array('message' =>
 					'No hay taxis disponibles.')));
 			} else {
 				$slicedItem = array_shift($id_collection);
@@ -58,7 +58,7 @@ class ApiController extends Controller
 		// 	$this->_sendResponse(200, CJSON::encode(array('code' => 1)));
 		// } else {
 		// 	$this->_sendResponse(400, CJSON::encode(array('code' => 0)));
-		// }		
+		// }
 	}
 
 	public function actionFinishRequest()
@@ -66,13 +66,13 @@ class ApiController extends Controller
 		$this->render('finishRequest');
 	}
 
-	public function actionRegistrationIdStore() 
+	public function actionRegistrationIdStore()
 	{
-		if(isset($_POST['registration_id']) && isset($_POST['userType'])) {
+		if(isset($_POST['registration_id']) && isset($_POST['user_type'])) {
 			$registration_id = $_POST['registration_id'];
 			$userType = $_POST['userType'];
-			$idStore = new IdStore($registration_id, $userType);
-			$idStore->store();
+
+			Yii::app()->idStore->store( $registration_id, $user_type );
 
 			$this->_sendResponse(200, CJSON::encode(array('code' => 1)));
 		} else {
@@ -80,21 +80,15 @@ class ApiController extends Controller
 		}
 	}
 
-	public function actionRequestTaxiFromCompany() 
+	public function actionRequestTaxiFromCompany()
 	{
-		if(isset($_POST['latitude']) && isset($_POST['longitude']) 
+		if(isset($_POST['latitude']) && isset($_POST['longitude'])
 			&& isset($_POST['company_id'])) {
-			// función de espera(andree)
-			$token = $this->generateRandomString();
+
+			$this->send( $_POST['latitude'], $_POST['longitude'] );
+
 			$this->_sendResponse(200, CJSON::encode(array(
-				'token'=>$token, 
-				'driver_details'=>array('name'=>'Juan Perez'),
-				'taxi_details'=>array('latitude'=>'21.043935',
-					"longitude"=>"-89.641181",
-					"plate"=>"XYZ123",
-				  	"model"=>"Nissan Altima",
-				  	"year"=>"2009",
-				)
+				'message'=>'Solicitud enviada exitosamente'
 			)));
 		} else {
 			$this->_sendResponse(400, CJSON::encode(array('code' => 0)));
@@ -108,7 +102,7 @@ class ApiController extends Controller
 			$password = $_POST['password'];
 			$userIdentity = new UserIdentity($username, $password);
 
-			$attributes = $userIdentity->authenticate();			
+			$attributes = $userIdentity->authenticate();
 			unset( $attributes['password_hash'] );
 
 			if($userIdentity->errorCode===UserIdentity::ERROR_NONE) {
@@ -130,9 +124,9 @@ class ApiController extends Controller
 		}
 	}
 
-	private function generateRandomString($length = 30) 
+	private function generateRandomString($length = 30)
 	{
-	    $characters = 
+	    $characters =
 	    	'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	    $randomString = '';
 	    for ($i = 0; $i < $length; $i++) {
@@ -144,27 +138,64 @@ class ApiController extends Controller
 	public function actionRequestTaxi()
 	{
 		// $this->render('requestTaxi');
-		if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
-			$row = array(
-			  array("company_id"=>"1","company_name"=>"Econotaxi"),
-			  array("company_id"=>"2","company_name"=>"Taxifeliz"),
-			  );
-			$this->_sendResponse(200, CJSON::encode($row));
-		} else {
+		if(isset($_POST['latitude']) && isset($_POST['longitude'])) :
+
+			//obtenemos las companias de taxi
+			$taxistas = Taxista::model()->findAll( array(
+				'select'=>'t.company_taxista',
+			    'group'=>'t.company_taxista',
+			    'distinct'=>true,
+			));
+
+			$companias;
+			foreach ($taxistas as $taxista) {
+				$companias[] = $taxista->company_taxista;
+			}
+
+			$this->_sendResponse(200, CJSON::encode($companias));
+		else:
 			$this->_sendResponse(400, CJSON::encode(array('code' => 0)));
-		}
+		endif;
 	}
 
-	private function _sendResponse($status = 200, $body = '', $content_type = 
+	private function send($latitude, $longitude)
+	{
+		$url = 'https://android.googleapis.com/gcm/send';
+		Yii::log( "Action send to: $url", CLogger::LEVEL_INFO );
+
+		$data = CJSON::encode( array(
+			'registration_ids' => array(
+				'APA91bE4KYmwWa2IEyWhi-Bti3mvR-UyMEVdryW3rX1CdtHx_rZ_BngZT2pI9wkeZ8lSgBD-57csBN7fKge'.
+				'-ytLtfu66VFJgYF5mYZ631YTurJo64QPWUKrfcB0aVR1h3TMD-uttnkmetPGEBJo7AMiByT1hvO5ENA'
+			),
+			'data' => array('latitude' => $latitude, 'longitude'=>$longitude, 'message'=>'Calle 35 #226 x30 y 32'),
+		));
+		Yii::log( "data: $data", CLogger::LEVEL_INFO );
+
+		$options = array( 'http' => array(
+	        'header'  => "Content-type: application/json\r\n".
+	        			 "Authorization:key=AIzaSyCnvXGG7Q9N1sdip3vEdELiyLQHgVJCDMw\r\n",
+	        'method'  => 'POST',
+	        'content' => $data,
+		), );
+		Yii::log( 'options: ' . CJSON::encode($options), CLogger::LEVEL_INFO );
+
+
+		$context  = stream_context_create($options);
+		$result = file_get_contents($url, false, $context);
+		Yii::log( "respuesta: $result", CLogger::LEVEL_INFO );
+	}
+
+	private function _sendResponse($status = 200, $body = '', $content_type =
 		'text/html')
 	{
 	    // set the status
-	    $status_header = 
+	    $status_header =
 	    	'HTTP/1.1 ' . $status . ' ' . $this->_getStatusCodeMessage($status);
 	    header($status_header);
 	    // and the content type
 	    header('Content-type: ' . $content_type);
-	 
+
 	    // pages with body are easy
 	    if($body != '')
 	    {
@@ -176,7 +207,7 @@ class ApiController extends Controller
 	    {
 	        // create some body messages
 	        $message = '';
-	 
+
 	        // this is purely optional, but makes the pages a little nicer to read
 	        // for your users.  Since you won't likely send a lot of different status codes,
 	        // this also shouldn't be too ponderous to maintain
@@ -186,25 +217,25 @@ class ApiController extends Controller
 	                $message = 'You must be authorized to view this page.';
 	                break;
 	            case 404:
-	                $message = 'The requested URL ' . $_SERVER['REQUEST_URI'] 
+	                $message = 'The requested URL ' . $_SERVER['REQUEST_URI']
 	                	. ' was not found.';
 	                break;
 	            case 500:
-	                $message = 
+	                $message =
 	                 'The server encountered an error processing your request.';
 	                break;
 	            case 501:
 	                $message = 'The requested method is not implemented.';
 	                break;
 	        }
-	 
-	        // servers don't always have a signature turned on 
+
+	        // servers don't always have a signature turned on
 	        // (this is an apache directive "ServerSignature On")
-	        $signature = ($_SERVER['SERVER_SIGNATURE'] == '') 
-	        	? $_SERVER['SERVER_SOFTWARE'] . ' Server at ' 
-	        	. $_SERVER['SERVER_NAME'] . ' Port ' 
+	        $signature = ($_SERVER['SERVER_SIGNATURE'] == '')
+	        	? $_SERVER['SERVER_SOFTWARE'] . ' Server at '
+	        	. $_SERVER['SERVER_NAME'] . ' Port '
 	        	. $_SERVER['SERVER_PORT'] : $_SERVER['SERVER_SIGNATURE'];
-	 
+
 	        // this should be templated in a real-world solution
 	        $body = '
 	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -220,7 +251,7 @@ class ApiController extends Controller
 	    <address>' . $signature . '</address>
 	</body>
 	</html>';
-	 
+
 	        echo $body;
 	    }
 	    Yii::app()->end();
