@@ -1,0 +1,2256 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"res",
+				"registration_ids  (variable)"
+			],
+			[
+				"distance",
+				"distance_value"
+			],
+			[
+				"ta",
+				"taxis_data  (variable)"
+			],
+			[
+				"taxis",
+				"taxis_data"
+			],
+			[
+				"tax",
+				"taxis_data"
+			],
+			[
+				"taxi",
+				"taxi_data"
+			],
+			[
+				"attribu",
+				"attributes"
+			],
+			[
+				"font",
+				"font-weight:   (property)"
+			],
+			[
+				"back",
+				"background-color:   (property)"
+			],
+			[
+				"sender",
+				"sender_last_name"
+			],
+			[
+				"sender_",
+				"sender_first_name"
+			],
+			[
+				"TRUE",
+				"TRUE"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"title",
+				"title-ebook"
+			],
+			[
+				"clear",
+				"clear"
+			],
+			[
+				"bo",
+				"bold"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"paddin",
+				"padding-right"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"font-w",
+				"font-weight:   (property)"
+			],
+			[
+				"banner",
+				"banner-seccion"
+			],
+			[
+				"banner-",
+				"banner-description"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"background",
+				"background-size"
+			],
+			[
+				"bac",
+				"background-clip"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"border-s",
+				"border-style"
+			],
+			[
+				"col",
+				"column-left"
+			],
+			[
+				"b",
+				"bolder"
+			],
+			[
+				"colum",
+				"column-left"
+			],
+			[
+				"c",
+				"cover  (value)"
+			],
+			[
+				"background-",
+				"background-position"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"border-",
+				"border-style"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"tabl",
+				"table-cell"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"alig",
+				"text-align"
+			],
+			[
+				"no",
+				"no-repeat  (value)"
+			],
+			[
+				"slider",
+				"slider_4_liston"
+			],
+			[
+				"marin",
+				"margin-bottom"
+			],
+			[
+				"display",
+				"display:   (property)"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"foto",
+				"foto_alum"
+			],
+			[
+				"ma",
+				"maxHeight"
+			],
+			[
+				"max",
+				"maxWidth"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"jcrop",
+				"jcrop_api"
+			],
+			[
+				"part",
+				"parseInt"
+			],
+			[
+				"relative",
+				"relativeHeight"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"pass",
+				"password_alum  (variable)"
+			],
+			[
+				"pas",
+				"password_alum  (variable)"
+			],
+			[
+				"password",
+				"password_alum"
+			],
+			[
+				"nombre",
+				"nombre_alum"
+			],
+			[
+				"array_un",
+				"array_unshift"
+			],
+			[
+				"ID",
+				"ID_DEFAULT_MODEL"
+			],
+			[
+				"id",
+				"id_plan"
+			],
+			[
+				"unset",
+				"unsetAttributes"
+			],
+			[
+				"unser",
+				"unsetAttributes"
+			],
+			[
+				"array_p",
+				"array_push"
+			],
+			[
+				"fk",
+				"fk_id_plan  (variable)"
+			],
+			[
+				"Perop",
+				"PeriodoEscolar_inicio_per"
+			],
+			[
+				"PeriodoEscolar_",
+				"PeriodoEscolar_fin_per"
+			],
+			[
+				"se",
+				"selectedDate"
+			],
+			[
+				"default",
+				"DEFAULT_PK"
+			],
+			[
+				"cl",
+				"click  (function)"
+			],
+			[
+				"ajax",
+				"ajaxsend	$.ajaxSend()"
+			],
+			[
+				"load",
+				"load-save"
+			],
+			[
+				"session",
+				"session_destroy"
+			],
+			[
+				"direc",
+				"directorios"
+			],
+			[
+				"error",
+				"error_reporting"
+			],
+			[
+				"directorio",
+				"directorioActual"
+			],
+			[
+				"me",
+				"messageComunicator"
+			],
+			[
+				"trow",
+				"throws"
+			],
+			[
+				"succ",
+				"successful"
+			],
+			[
+				"aut",
+				"author_comment"
+			],
+			[
+				"creat",
+				"creation_time_comment"
+			],
+			[
+				"au",
+				"author_comment"
+			],
+			[
+				"em",
+				"email_comment"
+			],
+			[
+				"sta",
+				"status_comment"
+			],
+			[
+				"cre",
+				"creation_time_comment"
+			],
+			[
+				"data",
+				"dataProvider"
+			],
+			[
+				"Update",
+				"Update"
+			],
+			[
+				"COLUMN",
+				"COLUMN1"
+			],
+			[
+				"la",
+				"layout"
+			],
+			[
+				"COLUMN1",
+				"COLLUMN1"
+			],
+			[
+				"A",
+				"AIngredient"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"create",
+				"creation_event"
+			],
+			[
+				"items",
+				"_items"
+			],
+			[
+				"stat",
+				"static"
+			],
+			[
+				"name",
+				"name_lookup"
+			],
+			[
+				"code",
+				"code_lookup"
+			],
+			[
+				"a",
+				"auth"
+			],
+			[
+				"cr",
+				"criteria"
+			],
+			[
+				"crea",
+				"creation_event"
+			],
+			[
+				"le",
+				"userLength"
+			],
+			[
+				"web",
+				"website"
+			],
+			[
+				"usua",
+				"nombreUsuario"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "protected/models/Solicitud.php",
+			"settings":
+			{
+				"buffer_size": 3918,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "protected/controllers/ConfiguracionController.php",
+			"settings":
+			{
+				"buffer_size": 4626,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "protected/views/configuracion/_form.php",
+			"settings":
+			{
+				"buffer_size": 1390,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "protected/views/configuracion/view.php",
+			"settings":
+			{
+				"buffer_size": 2066,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "protected/controllers/SolicitudController.php",
+			"settings":
+			{
+				"buffer_size": 7338,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "protected/controllers/EquipoController.php",
+			"settings":
+			{
+				"buffer_size": 5496,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"show",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"ssql",
+				"Set Syntax: SQL"
+			],
+			[
+				"shoe",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"sho",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ssjava",
+				"Set Syntax: Java"
+			],
+			[
+				"sshtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"git",
+				"Git: Commit"
+			],
+			[
+				"gitp",
+				"Git: Push"
+			],
+			[
+				"ssj",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ssp",
+				"Set Syntax: Python"
+			],
+			[
+				"codein",
+				"SublimeCodeIntel: Reset"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"ssja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ss",
+				"Set Syntax: PHP"
+			],
+			[
+				"lint",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"linter",
+				"SublimeLinter: Extract Annotations"
+			],
+			[
+				"remve",
+				"Package Control: Remove Package"
+			],
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"LIST PA",
+				"Package Control: List Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: abstract"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"ssx",
+				"Set Syntax: XML"
+			],
+			[
+				"ssphp",
+				"Set Syntax: PHP"
+			],
+			[
+				"ssph",
+				"Set Syntax: PHP"
+			],
+			[
+				"ssl",
+				"Set Syntax: LESS"
+			],
+			[
+				"sscss",
+				"Set Syntax: CSS"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"int",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/controllers/SiteController.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/controllers/EquipoController.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/controllers/TaxistaController.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/controllers/UsuarioController.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/smst_update_1.sql",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/views/equipo/view.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/views/configuracion/view.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/views/solicitud/view.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/css/form.css",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/views/configuracion/_form.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/views/equipo/_form.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/views/taxista/_form.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/views/usuario/_form.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/models/Configuracion.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/models/LoginForm.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/runtime/gii-1.1.14/ModelCode.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/css/main.css",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/components/Controller.php",
+		"/C/Wamp/www/Aplicaciones/superdigitales/google8256289d153302bb.html",
+		"/C/Users/Andree/Downloads/Mizage Divvy 1.3.1 Windows by gta126/Readme.txt",
+		"/C/Users/Andree/Downloads/Mizage Divvy 1.3.1 Windows by gta126/read_me.txt",
+		"/C/Users/Andree/Dropbox/Proeval/01 Datos Evaluaciones/2014/FCA/FCA_LIC_AlumnosCargaDeAsignaturas_05-03-2014.sql",
+		"/C/Users/Andree/Dropbox/Proeval/01 Datos Evaluaciones/2014/FCA/Relacion P-A-G.txt",
+		"/C/Users/Andree/Dropbox/Proeval/01 Datos Evaluaciones/2014/FCA/FCA_LIC_AlumnosCargaDeAsignaturas_05-03-2014.txt",
+		"/C/test.sql",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/views/taxista/view.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/views/usuario/view.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/views/equipo/_view.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/models/Taxista.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/runtime/tmpA88E.tmp",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/index-test.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/models/UbicacionTaxista.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/models/UbicacioinTaxista.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/smst.sql",
+		"/E/Instaladores/Guitar Pro 6/Instrucciones.txt",
+		"/C/Users/Andree/Downloads/USBDiskEjector/USB Disk Ejector.html",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/conoce.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/models/panel/procesos_usuario.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/config/profiler.php",
+		"/C/Wamp/www/Aplicaciones/elqp/system/database/drivers/pdo/pdo_result.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/panel/login.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/controllers/panel/blog.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/panel/blog.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/models/panel/procesos_noticias.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/controllers/blog.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/controllers/inicio.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/inc/panel/site_nav.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/models/panel/procesos_login.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/config/config.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/inc/panel/site_header.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/inc/panel/site_footer.php",
+		"/C/Wamp/www/Aplicaciones/elqp/index.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/inicio.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/eBook.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/config/database.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/include/slider_principal.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/conferencias.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/models/consultas_site.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/controllers/panel/login.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/controllers/cuida_lo_que_publicas.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/descargables_imagen.php",
+		"/C/Wamp/www/Aplicaciones/youtube_test.html",
+		"/C/Wamp/www/Aplicaciones/elqp/ebook121/descargar-ebook.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/controllers/multimedia.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/libraries/Multi_upload.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/config/migration.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/include/medios.php",
+		"/C/Wamp/www/Aplicaciones/elqp/js/panel/messages_es.js",
+		"/C/Wamp/www/Aplicaciones/elqp/js/sliderMedios/jquery.flexslider.js",
+		"/C/Wamp/www/Aplicaciones/elqp/application/libraries/Excel/PHPExcel/Shared/JAMA/EigenvalueDecomposition.php",
+		"/C/Wamp/www/Aplicaciones/elqp/images/menu-icono.back",
+		"/C/Wamp/www/Aplicaciones/elqp/js/panel/tinymce/skins/lightgray/fonts/icomoon.svg",
+		"/C/Wamp/www/Aplicaciones/elqp/application/libraries/Excel/PHPExcel/Worksheet/PageMargins.php",
+		"/C/Wamp/www/Aplicaciones/elqp/system/libraries/Email.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/libraries/Excel/PHPExcel/Calculation/MathTrig.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/controllers/aviso_privacidad.php",
+		"/C/Wamp/www/Aplicaciones/elqp/system/core/Controller.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/controllers/contacto.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/contacto.php",
+		"/C/Wamp/www/Aplicaciones/superdigitales/blog/wp-content/themes/wpbootstrap/lightbox/css/screen.css",
+		"/C/Wamp/www/Aplicaciones/superdigitales/blog/wp-content/themes/wpbootstrap/lightbox/js/jquery-1.11.0.min.map",
+		"/C/Users/Andree/AppData/Local/Temp/fz3temp-1/eBook.php",
+		"/C/Wamp/www/Aplicaciones/elqp/elqp.sublime-project",
+		"/C/Wamp/www/Aplicaciones/elqp/system/database/DB_active_rec.php",
+		"/C/Wamp/www/Aplicaciones/elqp/lib/dbconfig.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/controllers/panel/categorias.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/libraries/Excel/PHPExcel/Shared/Escher/DgContainer.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/conoce_prensa.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/libraries/Excel/PHPExcel/CachedObjectStorageFactory.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/inc/footer.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/inc/head.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/controllers/footer.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/controllers/index.html",
+		"/C/Users/A.Vela/Desktop/index.html",
+		"/C/Wamp/www/Aplicaciones/elqp/.gitignore",
+		"/C/Wamp/www/Aplicaciones/elqp/.htaccess",
+		"/C/Users/A.Vela/AppData/Local/GitExtensions/GitExtensions.exe_Url_vxrwwgs43p3uzqfwbgpjskkge2tge4au/2.46.0.0/user.config",
+		"/C/Users/A.Vela/Desktop/Educación Posgrado/Respuestas.sql",
+		"/C/Users/A.Vela/Desktop/Educación Posgrado/Grupo.sql",
+		"/C/Users/A.Vela/Dropbox/Documentos/Programas.txt",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/inc/header.php",
+		"/C/Users/A.Vela/Downloads/detectmobilebrowser.php.txt",
+		"/C/Wamp/www/Aplicaciones/elqp/css/jquery-ui.css",
+		"/C/Wamp/www/Aplicaciones/elqp/login/index.php",
+		"/C/Wamp/www/Aplicaciones/elqp/google55ca05ca1d5f2df6.html",
+		"/C/Wamp/www/Aplicaciones/elqp/application/libraries/index.html",
+		"/C/Wamp/www/Aplicaciones/elqp/application/libraries/funciones.php",
+		"/C/Users/A.Vela/Downloads/Respuestas.sql",
+		"/C/Wamp/www/Aplicaciones/elqp/js/jquery-ui-1.9.2.custom.js",
+		"/C/Wamp/www/Aplicaciones/elqp/js/metro/MetroJs.lt.css",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/controllers/ConfiguracionController.php",
+		"/C/Wamp/www/Aplicaciones/SMST_WEB/protected/views/configuracion/update.php",
+		"/C/Users/A.Vela/Dropbox/Documentos/Comandos.txt",
+		"/C/Users/A.Vela/Dropbox/Documentos/Seriales Windows.txt",
+		"/C/Users/A.Vela/Dropbox/Conalep/6° Semestre/Paginas Web/blink182/blink182-principal.html",
+		"/C/Wamp/www/Aplicaciones/elqp/js/metro/MetroJs.lt.min.css",
+		"/C/Wamp/www/Aplicaciones/elqp/js/metro/MetroJs.lt.js",
+		"/C/Wamp/www/Aplicaciones/elqp/js/metro/MetroJs.lt.min.js",
+		"/C/Users/A.Vela/Documents/Arduino/libraries/readme.txt",
+		"/C/Wamp/www/Aplicaciones/elqp/css/video-js.css",
+		"/C/Wamp/www/Aplicaciones/elqp/css/animations.css",
+		"/C/Wamp/www/Aplicaciones/SMST_WEBtest.txt",
+		"/C/Wamp/www/Aplicaciones/video-js/demo.html",
+		"/C/Users/A.Vela/Downloads/Stardock Start8 Full Murd0ck (v.1.0)/Stardock Start8 Full Murd0ck (v.1.0)/Instrucciones de instalacion.txt",
+		"/C/Wamp/www/Aplicaciones/elqp/css/responsive.css",
+		"/C/Wamp/www/Aplicaciones/elqp/css/estilos.css",
+		"/C/Wamp/www/Aplicaciones/elqp/application/views/conoce_equipo.php",
+		"/C/Wamp/www/Aplicaciones/elqp/application/controllers/conferencia.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"model",
+			"taxi_data",
+			"$nearest_distance",
+			"ubicacioin",
+			"<?",
+			"php",
+			"redirect",
+			"sender ",
+			"sender",
+			"last_name",
+			"first_name",
+			"$_POST",
+			"ebook",
+			" 38,",
+			" 31,",
+			" 42,",
+			" 33,",
+			" 32,",
+			" 31,",
+			" 42,",
+			" 17,",
+			" 33,",
+			" 32,",
+			"body",
+			"columna",
+			"bottom",
+			"column",
+			"color",
+			"@",
+			"/*",
+			"bottom",
+			"300",
+			"/*",
+			"icono",
+			"body",
+			"#",
+			"header-up",
+			"background-image",
+			"slider-5",
+			"contenedor-slider",
+			"primerFiltro",
+			"PDO",
+			"from",
+			"p>",
+			"12",
+			"NoEncontrado.html",
+			"row",
+			"img",
+			"image()",
+			"public function",
+			"width",
+			"var width = document.images.open_img.width;",
+			"unscale",
+			"adjustImageMeasures",
+			"porcientoAltura",
+			"forma",
+			"alto",
+			"ancho",
+			"tabs",
+			"extensions",
+			"convert",
+			"space",
+			"indent",
+			"ident",
+			"identation",
+			"customFieldRowInternal(",
+			"TYPE_CONDENSED",
+			"startDate",
+			"'",
+			"packages",
+			"responsiveCss",
+			"fold",
+			"inicio_per",
+			"\n			",
+			"				",
+			"\n				",
+			"directorios",
+			"extension",
+			"file",
+			"dh",
+			"extensions",
+			"extension-dir",
+			"cgi",
+			"directory",
+			"list",
+			" ",
+			"session",
+			"_session",
+			"nom",
+			".",
+			"  ",
+			".",
+			"12017945",
+			"08001964",
+			"12017945",
+			"08002805",
+			"10003625",
+			"13211357",
+			"13211351",
+			"10104601",
+			"10104597",
+			"10104596",
+			"10104594",
+			"10104595",
+			"10104596",
+			"12018489",
+			"13018492",
+			"12018487",
+			"12018489",
+			"12018487",
+			"PERIODONCIA",
+			"Periodoncia",
+			"PERIODONCIA",
+			"Periodoncia",
+			"periodoncia",
+			"port",
+			"openss",
+			"position",
+			"__",
+			"fixed",
+			"idRecipe",
+			"dialogClassroom",
+			"eleteAIngredient",
+			"extension",
+			"Student",
+			"model",
+			"manager",
+			"smanager"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "protected/models/Solicitud.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3918,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3918,
+								3918
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1426.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "protected/controllers/ConfiguracionController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4626,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1666,
+								1666
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 466.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "protected/views/configuracion/_form.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1390,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								567,
+								567
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "protected/views/configuracion/view.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2066,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1010,
+								1010
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "protected/controllers/SolicitudController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7338,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3850,
+								3850
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1320.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "protected/controllers/EquipoController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5496,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								627,
+								627
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 245.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"project": "smst.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"controller",
+				"protected\\controllers\\EquipoController.php"
+			],
+			[
+				"view",
+				"protected\\views\\configuracion\\view.php"
+			],
+			[
+				"form",
+				"protected\\views\\configuracion\\_form.php"
+			],
+			[
+				"model",
+				"protected\\models\\Configuracion.php"
+			],
+			[
+				"solicitud",
+				"protected\\controllers\\SolicitudController.php"
+			],
+			[
+				"ubicacio",
+				"protected\\models\\UbicacioinTaxista.php"
+			],
+			[
+				"soli",
+				"protected\\models\\Solicitud.php"
+			],
+			[
+				"processo",
+				"application\\models\\panel\\procesos_login.php"
+			],
+			[
+				"site",
+				"application\\views\\inc\\panel\\site_nav.php"
+			],
+			[
+				"config",
+				"application\\config\\config.php"
+			],
+			[
+				"desc",
+				"application\\views\\descargables_imagen.php"
+			],
+			[
+				"multimedia",
+				"application\\controllers\\multimedia.php"
+			],
+			[
+				"inicio",
+				"application\\views\\inicio.php"
+			],
+			[
+				"ebook",
+				"application\\views\\eBook.php"
+			],
+			[
+				"data",
+				"application\\config\\database.php"
+			],
+			[
+				"contracto",
+				"application\\controllers\\contacto.php"
+			],
+			[
+				"contacto",
+				"application\\views\\contacto.php"
+			],
+			[
+				"footer",
+				"application/controllers/footer.php"
+			],
+			[
+				"head",
+				"application/views/inc/head.php"
+			],
+			[
+				"he",
+				"application/views/inc/head.php"
+			],
+			[
+				"contac",
+				"application/views/contacto.php"
+			],
+			[
+				"index",
+				"application/controllers/index.html"
+			],
+			[
+				"descar",
+				"application/views/descargables_imagen.php"
+			],
+			[
+				"conoce",
+				"application/views/conoce.php"
+			],
+			[
+				"conf",
+				"application/config/config.php"
+			],
+			[
+				"htaccess",
+				".htaccess"
+			],
+			[
+				"htac",
+				".htaccess"
+			],
+			[
+				"hea",
+				"application/views/inc/head.php"
+			],
+			[
+				"conferencia",
+				"application/views/conferencias.php"
+			],
+			[
+				"header",
+				"application/views/inc/header.php"
+			],
+			[
+				"jquery",
+				"css/jquery-ui.css"
+			],
+			[
+				"jqueryui",
+				"js/jquery-ui-1.9.2.custom.js"
+			],
+			[
+				"metro",
+				"js/metro/MetroJs.lt.min.css"
+			],
+			[
+				"video",
+				"css/video-js.css"
+			],
+			[
+				"style",
+				"css/style.css"
+			],
+			[
+				"respons",
+				"css/responsive.css"
+			],
+			[
+				"respon",
+				"css/responsive.css"
+			],
+			[
+				"include/s",
+				"application/views/include/slider_principal.php"
+			],
+			[
+				"consultas",
+				"application/models/consultas_site.php"
+			],
+			[
+				"incio",
+				"application/controllers/inicio.php"
+			],
+			[
+				"css",
+				"css/estilos.css"
+			],
+			[
+				"conta",
+				"application/views/contacto.php"
+			],
+			[
+				"confere",
+				"application/controllers/conferencia.php"
+			],
+			[
+				"equipo",
+				"application/views/conoce_equipo.php"
+			],
+			[
+				"desca",
+				"ebook121/descargar-ebook.php"
+			],
+			[
+				"oa",
+				"login/twitter/OAuth.php"
+			],
+			[
+				"twa",
+				"login/twitter/twitteroauth.php"
+			],
+			[
+				"twconfi",
+				"login/config/twconfig.php"
+			],
+			[
+				"aut",
+				"application/config/autoload.php"
+			],
+			[
+				"ben",
+				"system/core/Benchmark.php"
+			],
+			[
+				"funciones",
+				"lib/funciones.php"
+			],
+			[
+				"auto",
+				"application/config/autoload.php"
+			],
+			[
+				"cuida",
+				"application/controllers/cuida_lo_que_publicas.php"
+			],
+			[
+				"contaco",
+				"application/views/contacto.php"
+			],
+			[
+				"route",
+				"application/config/routes.php"
+			],
+			[
+				"prin",
+				"application/controllers/Principal.php"
+			],
+			[
+				"princi",
+				"application/controllers/Principal.php"
+			],
+			[
+				"slider",
+				"application/views/slider.php"
+			],
+			[
+				"fixies",
+				"css/fixies.css"
+			],
+			[
+				"direc",
+				"directorio.html"
+			],
+			[
+				"routes",
+				"application/config/routes.php"
+			],
+			[
+				"wel",
+				"application/controllers/welcome.php"
+			],
+			[
+				"configroutes",
+				"application/config/routes.php"
+			],
+			[
+				"alumno_for",
+				"protected/views/alumno/_form.php"
+			],
+			[
+				"tba",
+				"protected/extensions/yiibooster/widgets/TbActiveForm.php"
+			],
+			[
+				"wid",
+				"protected/extensions/yiibooster/widgets/widgets.md"
+			],
+			[
+				"_form",
+				"protected/views/alumno/_form.php"
+			],
+			[
+				"login",
+				"protected/models/LoginForm.php"
+			],
+			[
+				"viewsite",
+				"protected/views/site/login.php"
+			],
+			[
+				"main",
+				"protected/config/main.php"
+			],
+			[
+				"escuela",
+				"protected/views/escuela/view.php"
+			],
+			[
+				"configmain",
+				"protected/config/main.php"
+			],
+			[
+				"alumno",
+				"models/Alumno.php"
+			],
+			[
+				"escu",
+				"models/Escuela.php"
+			],
+			[
+				"viewalumno",
+				"views/alumno/_form.php"
+			],
+			[
+				"log",
+				"runtime/application.log"
+			],
+			[
+				"plan",
+				"models/Plan.php"
+			],
+			[
+				"tbac",
+				"extensions/yiibooster/widgets/TbActiveForm.php"
+			],
+			[
+				"easy",
+				"extensions/easyImage/EasyImage.php"
+			],
+			[
+				"periodoadmin",
+				"views/periodoEscolar/admin.php"
+			],
+			[
+				"plan_form",
+				"views/plan/_form.php"
+			],
+			[
+				"planadmin",
+				"views/plan/admin.php"
+			],
+			[
+				"html",
+				"html"
+			],
+			[
+				"alumnoupdate",
+				"views/alumno/update.php"
+			],
+			[
+				"alumnocreate",
+				"views/alumno/create.php"
+			],
+			[
+				"tbacti",
+				"extensions/yiibooster/widgets/TbActiveForm.php"
+			],
+			[
+				"tbfile",
+				"extensions/yiibooster/widgets/TbFileUpload.php"
+			],
+			[
+				"alumnocontroller",
+				"controllers/AlumnoController.php"
+			],
+			[
+				"asignaturaadmin",
+				"views/asignatura/admin.php"
+			],
+			[
+				"asign",
+				"models/Asignatura.php"
+			],
+			[
+				"asign_form",
+				"views/asignatura/_form.php"
+			],
+			[
+				"grado",
+				"models/Grado.php"
+			],
+			[
+				"asigadmin",
+				"views/asignatura/admin.php"
+			],
+			[
+				"alumno_form",
+				"views/alumno/_form.php"
+			],
+			[
+				"gradoadmin",
+				"views/grado/admin.php"
+			],
+			[
+				"alumnoadmin",
+				"views/alumno/admin.php"
+			],
+			[
+				"grado_form",
+				"views/grado/_form.php"
+			],
+			[
+				"gradocreate",
+				"views/grado/create.php"
+			],
+			[
+				"gradoupdate",
+				"views/grado/update.php"
+			],
+			[
+				"asigna_form",
+				"views/asignatura/_form.php"
+			],
+			[
+				"asigupdate",
+				"views/asignatura/update.php"
+			],
+			[
+				"asigncreate",
+				"views/asignatura/create.php"
+			],
+			[
+				"asignaadmin",
+				"views/asignatura/admin.php"
+			],
+			[
+				"escuela_form",
+				"views/escuela/_form.php"
+			],
+			[
+				"asignatura",
+				"views/asignatura/_form.php"
+			],
+			[
+				"planupda",
+				"views/plan/update_asignatura.php"
+			],
+			[
+				"plancreate",
+				"views/plan/create_asignatura.php"
+			],
+			[
+				"planview",
+				"views/plan/view.php"
+			],
+			[
+				"periodo",
+				"views/periodoEscolar/admin.php"
+			],
+			[
+				"planupdate",
+				"views/plan/update.php"
+			],
+			[
+				"escuelaview",
+				"views/escuela/view.php"
+			],
+			[
+				"periodoescolar_form",
+				"views/periodoEscolar/_form.php"
+			],
+			[
+				"tbdea",
+				"extensions/yiibooster/widgets/TbDetailView.php"
+			],
+			[
+				"periodo_form",
+				"views/periodoEscolar/_form.php"
+			],
+			[
+				"period",
+				"views/periodoEscolar/create.php"
+			],
+			[
+				"periodoescolaradmin",
+				"views/periodoEscolar/admin.php"
+			],
+			[
+				"periodoescolarcreate",
+				"views/periodoEscolar/create.php"
+			],
+			[
+				"periodoescolarupdate",
+				"views/periodoEscolar/update.php"
+			],
+			[
+				"colum",
+				"views/layouts/column2.php"
+			],
+			[
+				"periodocreate",
+				"views/periodoEscolar/create.php"
+			],
+			[
+				"column",
+				"views/layouts/column2.php"
+			],
+			[
+				"layout",
+				"views/layouts/column2.php"
+			],
+			[
+				"perio",
+				"models/PeriodoEscolar.php"
+			],
+			[
+				"asig",
+				"models/Asignatura.php"
+			],
+			[
+				"pla",
+				"models/Plan.php"
+			],
+			[
+				"p",
+				"models/Plan.php"
+			],
+			[
+				"plann",
+				"controllers/PlanController.php"
+			],
+			[
+				"asigna",
+				"controllers/AsignaturaController.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
