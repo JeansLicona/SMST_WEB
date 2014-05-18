@@ -29,7 +29,7 @@ $this->menu = array(
         array('label'=>'Registrar Equipo', 'url'=>array('equipo/create')),
         array('label'=>'Editar Equipo', 'url'=>array('update', 'id'=>$model->id_equipo)),
 	array('label'=>'Administrar Equipo', 'url'=>array('equipo/admin')),
- 
+
             )
         ),
         array(
@@ -41,6 +41,15 @@ $this->menu = array(
         array('label'=>' Reporte Global Sistema', 'url'=>array('solicitud/admin')),
             )
         ),
+        array(
+        'label' => 'Configuraciones',
+        'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+        'itemOptions ' => array('class' => 'dropdown'),
+        'submenuOptions ' => array('class' => 'dropdown-menu'),
+        'items' => array(
+            array( 'label'=>'Ver configuraciones', 'url'=>array('/configuracion/1') ),
+            array( 'label'=>'Actualizar configuraciones', 'url'=>array('/configuracion/update/1') )
+        ) ),
     );
 ?>
 

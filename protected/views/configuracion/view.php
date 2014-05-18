@@ -24,22 +24,25 @@ $this->menu = array(
         'itemOptions ' => array('class' => 'dropdown'),
         'submenuOptions ' => array('class' => 'dropdown-menu'),
         'items' => array(
-        array('label'=>'Registrar Equipo', 'url'=>array('equipo/create')),
-	array('label'=>'Administrar Equipo', 'url'=>array('equipo/admin')),
- 
-            )
-        ),
+            array('label'=>'Registrar Equipo', 'url'=>array('equipo/create')),
+            array('label'=>'Administrar Equipo', 'url'=>array('equipo/admin')),
+        ) ),
         array(
         'label' => 'Reporte',
         'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
         'itemOptions ' => array('class' => 'dropdown'),
         'submenuOptions ' => array('class' => 'dropdown-menu'),
         'items' => array(
-        array('label'=>' Reporte Global Sistema', 'url'=>array('solicitud/admin')),
-        array('label'=>'Actualizar Configuraciones',
-        'url'=>array('update', 'id'=>$model->id_conf)),
-            )
-        ),
+            array('label'=>' Reporte Global Sistema', 'url'=>array('solicitud/admin')),
+        ) ),
+        array(
+        'label' => 'Configuraciones',
+        'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+        'itemOptions ' => array('class' => 'dropdown'),
+        'submenuOptions ' => array('class' => 'dropdown-menu'),
+        'items' => array(
+            array( 'label'=>'Actualizar configuraciones', 'url'=>array('/configuracion/update/1') ),
+        )),
     );
 ?>
 
