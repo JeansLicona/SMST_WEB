@@ -26,7 +26,7 @@
         public function accessRules() {
             return array(
                 array('allow', // allow all users to perform 'index' and 'view' actions
-                    'actions' => array('index', 'view', 'search', 'create', 'update', 'admin', 'delete', 'reporte','suscripcion'),
+                    'actions' => array('index', 'view', 'search', 'create', 'update', 'admin', 'delete', 'reporte','suscripcion', 'locate'),
                     'users' => array('administrador', 'operador'),
                 ),
 //            array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -41,6 +41,21 @@
                     'users' => array('*'),
                 ),
             );
+        }
+
+        public function actionLocate()
+        {
+            $taxistaLocations = UbicacionTaxista::model()->findAll();
+
+            $data; // almacen para las ubicaciones
+            foreach ($taxistaLocations as $taxista) {
+                $data[] = $taxista->attributes;
+            }
+
+            // $this->layout = '//layouts/reporte';
+            $this->render('map', array(
+                'data' => $data,
+            ));
         }
 
         /**
@@ -91,7 +106,7 @@
             $this->render('reporte', array(
                 'model' => $model, 'reporte' => $reporteSolicitudes));
         }
-        
+
         public function actionSuscripcion(){
             $idTaxista = $_GET['id'];
             $model = $this->loadModel($idTaxista);
@@ -99,7 +114,7 @@
             if($model->activo==1){
                 $model->activo=0;
                 $usuario->activo=0;
-                
+
             }else{
                 $model->activo=1;
                 $usuario->activo=1;
@@ -207,7 +222,7 @@
         private function generarReporte($modelTaxista) {
             $query = new CDbCriteria();
             $query->select = "*";
-            $query->condition = "hora_fecha_solicitud between '" . $modelTaxista->fecha_inicio_reporte . "' 
+            $query->condition = "hora_fecha_solicitud between '" . $modelTaxista->fecha_inicio_reporte . "'
                 and '" . $modelTaxista->fecha_fin_reporte . "'  and fk_taxista = '" . $modelTaxista->id_taxista . "'
                      and estado_solicitud = '1'";
 
@@ -246,4 +261,3 @@
 
     }
 
-    
