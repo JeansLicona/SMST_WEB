@@ -17,6 +17,7 @@ $this->menu = array(
         'items' => array(
         array('label'=>'Registrar Usuario', 'url'=>array('usuario/create')),
         array('label'=>'Administrar Usuario', 'url'=>array('admin')),
+        array('label'=>'Localizar Taxistas', 'url'=>array('taxista/locate')),
             )
         ),
         array(

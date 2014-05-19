@@ -17,6 +17,7 @@ $this->menu = array(
         array('label'=>'Registrar Taxista', 'url'=>array('usuario/create')),
         array('label'=>'Búsqueda Avanzada Taxista', 'url'=>array('usuario/search')),
         array('label'=>'Administrar Taxistas', 'url'=>array('taxista/admin')),
+        array('label'=>'Localizar Taxistas', 'url'=>array('taxista/locate')),
             )
         ),
         array(

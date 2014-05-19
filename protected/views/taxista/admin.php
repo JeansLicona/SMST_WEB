@@ -16,6 +16,7 @@
         'items' => array(
         array('label'=>'Registrar Taxista', 'url'=>array('usuario/create')),
 	array('label'=>'Búsqueda Avanzada Taxista', 'url'=>array('usuario/search')),
+    array('label'=>'Localizar Taxistas', 'url'=>array('taxista/locate')),
             )
         ),
         array(

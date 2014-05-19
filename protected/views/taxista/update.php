@@ -19,6 +19,7 @@
         array('label' => 'Ver Taxista', 'url' => array('view', 'id' => $model->id_taxista)),
 	array('label'=>'Búsqueda Avanzada', 'url'=>array('usuario/search')),
         array('label'=>'Administrar Taxistas', 'url'=>array('admin')),
+        array('label'=>'Localizar Taxistas', 'url'=>array('taxista/locate')),
             )
         ),
         array(

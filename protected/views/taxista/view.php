@@ -20,6 +20,7 @@ $this->menu = array(
         array('label' => 'Editar Taxista', 'url' => array('update', 'id' => $model->id_taxista)),
         array('label'=>'Búsqueda Avanzada Taxistas', 'url'=>array('usuario/search')),
         array('label'=>'Administrar Taxistas', 'url'=>array('admin')),
+        array('label'=>'Localizar Taxistas', 'url'=>array('taxista/locate')),
             )
         ),
         array(

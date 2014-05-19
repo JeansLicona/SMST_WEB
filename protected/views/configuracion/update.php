@@ -9,14 +9,15 @@ $this->breadcrumbs=array(
 $this->pageTitle = Yii::app()->name . ' - Actualizar Configuración';
 $this->menu = array(
         array(
-        'label' => 'Taxista',
-        'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
-        'itemOptions ' => array('class' => 'dropdown'),
-        'submenuOptions ' => array('class' => 'dropdown-menu'),
-        'items' => array(
-        array('label'=>'Registrar Taxista', 'url'=>array('usuario/create')),
-	array('label'=>'Búsqueda Avanzada', 'url'=>array('usuario/search')),
-        array('label'=>'Administrar Taxistas', 'url'=>array('taxista/admin')),
+            'label' => 'Taxista',
+            'linkOptions ' => array('encode' => false, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'),
+            'itemOptions ' => array('class' => 'dropdown'),
+            'submenuOptions ' => array('class' => 'dropdown-menu'),
+            'items' => array(
+                array('label'=>'Registrar Taxista', 'url'=>array('usuario/create')),
+        	    array('label'=>'Búsqueda Avanzada', 'url'=>array('usuario/search')),
+                array('label'=>'Administrar Taxistas', 'url'=>array('taxista/admin')),
+                array('label'=>'Localizar Taxistas', 'url'=>array('taxista/locate')),
             )
         ),
         array(
